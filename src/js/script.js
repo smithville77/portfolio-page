@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', function () {
     const scrollPerc = window.scrollY / (document.documentElement.scrollHeight - containerHeight);
-    const draw = 700 * scrollPerc; // 100% for the full height of the container
+    const draw = 700 * scrollPerc; 
 
     svgLine.setAttribute("y2", draw + "%");
 
-    // Check if the SVG line has finished drawing
+    
     if (draw >= 100) {
       aboutMeSect.style.display = "block";
     }
