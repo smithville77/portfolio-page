@@ -6,19 +6,18 @@ body {
   background-color: rgb(32, 32, 77);
 }
 
-/* #drawing-container {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-
-
-#drawing-container.drawing {
-  opacity: 1;
-} */
 #about-me-sect {
   display: none;
-  animation: fadeIn 1s ease-in-out;
+}
+
+.fadeIn {
+  animation: fadeIn 0.4s ease-in-out;
+
+}
+
+.fadeOut {
+  animation: fadeOut 0.4s ease-in-out;
+  opacity: 0;
 }
 
 @keyframes fadeIn {
@@ -26,10 +25,29 @@ body {
     opacity: 0;
   }
 
+  50% {
+    opacity: 0.5;
+  }
+
   100% {
     opacity: 1;
   }
 }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 
 /* this is an example of creating a custom style class for tailwind css
  @layer utilities {
