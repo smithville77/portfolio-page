@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(32, 32, 77);
+}
+
+.black-box {
+  height: 200px;
+  width: 200px;
+  background-color: black;
+}
+
+
+
+/* this is an example of creating a custom style class for tailwind css
+ @layer utilities {
+  .btn-primary {
+     @apply bg-blue-500 text-white py-2 px-4 rounded;
+  }
+ }
+
+
+ <button class="btn-primary">Click me</button> */
