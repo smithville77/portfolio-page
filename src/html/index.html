@@ -8,43 +8,53 @@
     <script src="../js/script.js" defer></script>
   </head>
   <body>
-    <div class="mx-auto max-w-screen-lg">
-      <!-- sidebar -->
+    <div class="mx-auto h-[300vh] bg-blue-500 max-w-screen-lg relative">
+
       <div
-        class="bg-black fixed top-0 right-0 w-16 h-screen flex flex-col items-center justify-center"
-      >
-        <div class="text-white">Icon</div>
-        <div class="text-white">Icon</div>
-        <div class="text-white">Icon</div>
-      </div>
+      class="bg-black fixed top-0 right-0 w-16 h-screen flex flex-col items-center justify-center"
+    >
+      <div class="text-white">Icon</div>
+      <div class="text-white">Icon</div>
+      <div class="text-white">Icon</div>
+    </div>
 
       <!-- Hero Section -->
-      <div class="bg-blue-500 text-white h-screen flex">
-        <!-- introduction container -->
-        <container class="mt-20 ml-20 w-1/2">
+      <div class="text-white h-50 flex relative">
+        <!-- Introduction container -->
+        <div class="mt-20 ml-20 w-1/2">
           <h1 class="text-4xl font-bold">Hi</h1>
           <p class="italic">Web Developer</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quidem, eligendi quisquam error vel repudiandae rem odio ipsum modi harum.</p>
-        </container>
+        </div>
       </div>
 
-      <div class="bg-white h-50 w-100"></div>
-      
-
-      <div id="pathContainer">
-        <svg width="100%" height="100%">
-          <!-- SVG Path -->
-          <path id="linePath" d="M50 10 L50 200" stroke="black" stroke-width="2" fill="transparent"></path>
-          <!-- SVG Text -->
-          <!-- <text x="50%" y="50%" text-anchor="middle" font-size="20" class="show-text">
-            Drawn Text
-          </text> -->
+      <!-- SVG Line Container -->
+      <div id="svgContainer" class="h-[50vh] w-100 bg-blue-500 relative overflow-hidden">
+        <svg class="absolute inset-0 w-full h-full ml-20">
+          <line id="scrollLine" x1="0" y1="0" x2="0" y2="0%" stroke="black" stroke-width="8"></line>
         </svg>
+        
+        
+      </div> 
+
+      <div id="about-me-sect" class="bg-blue-500 text-white h-40 flex relative">
+        <!-- Introduction container -->
+        <div class="mt-5 ml-20 w-1/2">
+          <h1 class="text-4xl font-bold">About Me</h1>
+        </div>
       </div>
-      <!-- Work Experience  -->
-      <!-- Education  -->
-      <!-- Projects  -->
-      <!-- Contact -->
+
+      <!-- <div id="svgContainer2" class="h-[50vh] w-100 bg-blue-500 relative overflow-hidden">
+        <svg class="absolute inset-0 w-full h-full ml-20">
+          <line id="scrollLine2" x1="0" y1="0" x2="0" y2="0%" stroke="black" stroke-width="8"></line>
+        </svg>
+        
+        
+      </div>  -->
+
+      <!-- Work Experience, Education, Projects, Contact sections -->
+
     </div>
+ 
   </body>
 </html>

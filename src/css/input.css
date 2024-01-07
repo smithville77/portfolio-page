@@ -6,13 +6,30 @@ body {
   background-color: rgb(32, 32, 77);
 }
 
-.black-box {
-  height: 200px;
-  width: 200px;
-  background-color: black;
+/* #drawing-container {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 
+
+#drawing-container.drawing {
+  opacity: 1;
+} */
+#about-me-sect {
+  display: none;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 
 /* this is an example of creating a custom style class for tailwind css
  @layer utilities {
