@@ -15,6 +15,7 @@ body {
 
 }
 
+
 .fadeOut {
   animation: fadeOut 0.4s ease-in-out;
   opacity: 0;
