@@ -54,6 +54,57 @@ body {
   background-color: rgb(37, 37, 77);
 }
 
+
+#projects-section > div {
+  position: relative;
+  margin: 1em;
+  padding: 1em 2em;
+  font-size: inherit;
+  font-weight: 700;
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.draw {
+  position: relative;
+  overflow: hidden;
+}
+
+.draw::before,
+.draw::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: width 0.5s ease-out, background-color 0.5s ease-out;
+}
+
+.draw::before {
+  top: 0;
+  left: 0;
+  transform-origin: left;
+}
+
+.draw::after {
+  bottom: 0;
+  right: 0;
+  transform-origin: right;
+}
+
+.draw:hover::before,
+.draw:hover::after {
+  width: 100%;
+  background-color: #00FFFF;
+}
+
+
+.active {
+    font-weight: bold;
+    zoom: 1.1;
+}
+
 /* this is an example of creating a custom style class for tailwind css
  @layer utilities {
   .btn-primary {

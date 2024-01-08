@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        bubble: "rgb(17, 63, 55)",
+      },
+      textColor: {
+        'bubble-text': 'rgb(5, 179, 150)',
+      },
+    },
   },
   plugins: [],
-}
+};

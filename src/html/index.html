@@ -10,22 +10,23 @@
   <body>
     <div class="mx-auto h-[300vh]  max-w-screen-lg relative">
 
-      <div class="bg-black fixed top-0 right-0 w-16 h-screen flex flex-col items-center justify-center">
-        <button class="text-white text-s mb-3" onclick="scrollToTop()">Home</button>
-        <button class="text-white text-s mb-3" onclick="scrollToSection('about-me-sect')">About</button>
-        <button class="text-white text-s" onclick="scrollToSection('projects')">Projects</button>
+      <div class="fixed top-0 right-0 w-36 h-screen flex flex-col items-center justify-center">
+        <hr/>
+        <button class="text-white text-s mb-3 navBtn" onclick="scrollToTop()">Home </button>
+        <button class="text-white text-s mb-3 navBtn" onclick="scrollToSection('about-me-sect')">About</button>
+        <button class="text-white text-s navBtn" onclick="scrollToSection('projects')">Projects</button>
       </div>
       
 
       <!-- Hero Section -->
-      <div class="text-white h-50 flex relative">
+      <section class="text-white h-50 flex relative">
         <!-- Introduction container -->
         <div class="mt-20 ml-20 w-1/2">
           <h1 class="text-4xl font-bold">Hi</h1>
           <p class="italic">Web Developer</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quidem, eligendi quisquam error vel repudiandae rem odio ipsum modi harum.</p>
         </div>
-      </div>
+      </section>
 
       <!-- SVG Line Container -->
       <div id="svgContainer" class="h-[50vh] w-100  relative overflow-hidden">
@@ -36,12 +37,12 @@
         
       </div> 
 
-      <div id="about-me-sect" class="text-white h-20 flex relative">
+      <section id="about-me-sect" class="text-white h-20 flex relative">
         <!-- Introduction container -->
         <div class="mt-5 ml-20 w-1/2">
           <h1 class="text-4xl font-bold">About Me</h1>
         </div>
-      </div>
+      </section>
 
       <div id="svgContainer2" class="h-[50vh] w-100  relative overflow-hidden">
         <svg class="absolute inset-0 w-full h-full ml-20">
@@ -52,12 +53,12 @@
         
       </div> 
 
-      <div id="projects" class=" text-white h-20 flex relative flex justify-center items-center">
+      <section id="projects" class="text-white h-20 flex relative flex justify-center items-center ">
         <div class="mt-5 ml-20 w-full">
           <h1 class="text-4xl font-bold mb-2">Projects</h1>
         </div>
         <div id="projects-section" class="grid grid-cols-2 md:grid-cols-2">
-          <div class="max-w-sm mx-auto rounded overflow-hidden text-center cardHover">
+          <div class="max-w-sm mx-auto rounded overflow-hidden text-center cardHover draw">
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">Project 1</div>
               <p class="text-base">
@@ -65,12 +66,12 @@
               </p>
             </div>
             <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 1</span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 1</span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 1</span>
+              <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble">#project 1</span>
+              <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble">#project 1</span>
+              <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble">#project 1</span>
             </div>
           </div>
-          <div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg text-center">
+          <div class="max-w-sm mx-auto rounded overflow-hidden cardHover draw text-center">
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">project 2</div>
               <p class="text-base">
@@ -78,12 +79,12 @@
               </p>
             </div>
             <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 2</span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 2</span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 2</span>
+              <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble">#project 2</span>
+              <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble">#project 2</span>
+              <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble">#project 2</span>
             </div>
           </div>
-          <div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg text-center">
+          <div class="max-w-sm mx-auto rounded overflow-hidden cardHover draw text-center">
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">project 3</div>
               <p class="text-base">
@@ -91,12 +92,12 @@
               </p>
             </div>
             <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 3</span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 3</span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 3</span>
+              <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble">#project 3</span>
+              <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble">#project 3</span>
+              <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble">#project 3</span>
             </div>
           </div>
-          <div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg text-center">
+          <div class="max-w-sm mx-auto rounded overflow-hidden draw cardHover  text-center">
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">project 4</div>
               <p class="text-base">
@@ -104,13 +105,13 @@
               </p>
             </div>
             <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 4</span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 4</span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 4</span>
+              <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble">#project 4</span>
+              <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble">#project 4</span>
+              <span class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble">#project 4</span>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       
 
         </div>
