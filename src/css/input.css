@@ -50,6 +50,10 @@ body {
 }
 
 
+.cardHover:hover {
+  background-color: rgb(37, 37, 77);
+}
+
 /* this is an example of creating a custom style class for tailwind css
  @layer utilities {
   .btn-primary {

@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
       aboutMeSect.classList.add('fadeIn');
     } else if (draw < 90 && aboutMeSectionVisible) {
       aboutMeSectionVisible = false;
-      aboutMeSect.style.display = 'none';
+      aboutMeSect.style.display = 'hidden';
       aboutMeSect.classList.remove('fadeIn');
       aboutMeSect.classList.add('fadeOut');
-      aboutMeSect.style.display = 'none';
+      aboutMeSect.style.display = 'hidden';
     }
 
     // Check if the user has scrolled past the "About Me" section
@@ -51,10 +51,10 @@ document.addEventListener('DOMContentLoaded', function () {
         projectSect.classList.add('fadeIn');
       } else if (draw2 < 90 && projectSectionVisible) {
         projectSectionVisible = false;
-        projectSect.style.display = 'none';
+        projectSect.style.display = 'hidden';
         projectSect.classList.remove('fadeIn');
         projectSect.classList.add('fadeOut');
-        projectSect.style.display = 'none';
+        projectSect.style.display = 'hidden';
       }
 
     } else {
@@ -65,3 +65,13 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+}

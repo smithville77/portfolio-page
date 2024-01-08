@@ -8,15 +8,14 @@
     <script src="../js/script.js" defer></script>
   </head>
   <body>
-    <div class="mx-auto h-[300vh] bg-blue-500 max-w-screen-lg relative">
+    <div class="mx-auto h-[300vh]  max-w-screen-lg relative">
 
-      <div
-      class="bg-black fixed top-0 right-0 w-16 h-screen flex flex-col items-center justify-center"
-    >
-      <div class="text-white">Icon</div>
-      <div class="text-white">Icon</div>
-      <div class="text-white">Icon</div>
-    </div>
+      <div class="bg-black fixed top-0 right-0 w-16 h-screen flex flex-col items-center justify-center">
+        <button class="text-white text-s mb-3" onclick="scrollToTop()">Home</button>
+        <button class="text-white text-s mb-3" onclick="scrollToSection('about-me-sect')">About</button>
+        <button class="text-white text-s" onclick="scrollToSection('projects')">Projects</button>
+      </div>
+      
 
       <!-- Hero Section -->
       <div class="text-white h-50 flex relative">
@@ -29,7 +28,7 @@
       </div>
 
       <!-- SVG Line Container -->
-      <div id="svgContainer" class="h-[50vh] w-100 bg-blue-500 relative overflow-hidden">
+      <div id="svgContainer" class="h-[50vh] w-100  relative overflow-hidden">
         <svg class="absolute inset-0 w-full h-full ml-20">
           <line id="scrollLine" x1="0" y1="0" x2="0" y2="0%" stroke="white" stroke-width="8"></line>
         </svg>
@@ -37,14 +36,14 @@
         
       </div> 
 
-      <div id="about-me-sect" class="bg-blue-500 text-white h-20 flex relative">
+      <div id="about-me-sect" class="text-white h-20 flex relative">
         <!-- Introduction container -->
         <div class="mt-5 ml-20 w-1/2">
           <h1 class="text-4xl font-bold">About Me</h1>
         </div>
       </div>
 
-      <div id="svgContainer2" class="h-[50vh] w-100 bg-blue-500 relative overflow-hidden">
+      <div id="svgContainer2" class="h-[50vh] w-100  relative overflow-hidden">
         <svg class="absolute inset-0 w-full h-full ml-20">
           <line id="scrollLine2" x1="0" y1="0" x2="0" y2="0%" stroke="white" stroke-width="8"></line>
         </svg>
@@ -53,39 +52,66 @@
         
       </div> 
 
-      <div id="projects" class="bg-blue-500 text-white h-20 flex relative flex justify-center items-center">
-
+      <div id="projects" class=" text-white h-20 flex relative flex justify-center items-center">
         <div class="mt-5 ml-20 w-full">
-          <h1 class="text-4xl font-bold">Projects</h1>
+          <h1 class="text-4xl font-bold mb-2">Projects</h1>
         </div>
-        <div id="projects-section" class="grid grid-cols-2 ">
-          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <div id="projects-section" class="grid grid-cols-2 md:grid-cols-2">
+          <div class="max-w-sm mx-auto rounded overflow-hidden text-center cardHover">
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+              <div class="font-bold text-xl mb-2">Project 1</div>
               <p class="text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
               </p>
             </div>
             <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 1</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 1</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 1</span>
             </div>
           </div>
-
-          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+          <div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg text-center">
             <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+              <div class="font-bold text-xl mb-2">project 2</div>
               <p class="text-base">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
               </p>
             </div>
             <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 2</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 2</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 2</span>
             </div>
           </div>
+          <div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg text-center">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">project 3</div>
+              <p class="text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+              </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 3</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 3</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 3</span>
+            </div>
+          </div>
+          <div class="max-w-sm mx-auto rounded overflow-hidden shadow-lg text-center">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">project 4</div>
+              <p class="text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+              </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 4</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 4</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#project 4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
 
         </div>
       </div>
