@@ -159,3 +159,42 @@ socialBtns.forEach(element => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const welcomeSection = document.getElementById("welcome-sect");
+  const sidebarContainer = document.getElementById("welcome-spacer");
+  const mainSect = document.getElementById("main-sect");
+  let isSidebarVisible = false;
+
+  const debounce = (func, delay) => {
+    let timeout;
+    return function () {
+      const context = this;
+      const args = arguments;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(context, args), delay);
+    };
+  };
+
+  const handleScroll = debounce(function () {
+    const scrollY = window.scrollY;
+    const threshold = 300;
+
+    if (scrollY >= threshold && !isSidebarVisible) {
+    
+      sidebarContainer.append(welcomeSection);
+      welcomeSection.classList.add("animate-move-into-sidebar");
+      welcomeSection.querySelector("div").classList.remove("ml-20", "w-1/2");
+      isSidebarVisible = true;
+    } else if (scrollY < threshold && isSidebarVisible) {
+  
+      mainSect.prepend(welcomeSection);
+      welcomeSection.classList.remove("animate-move-into-sidebar", "fadeIn");
+      welcomeSection.querySelector("div").classList.add("mt-20", "ml-20", "w-1/2");
+      isSidebarVisible = false;
+    }
+  }, 100);
+
+  window.addEventListener("scroll", handleScroll);
+});
+
+

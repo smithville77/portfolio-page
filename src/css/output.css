@@ -594,10 +594,6 @@ video {
   inset: 0px;
 }
 
-.bottom-10 {
-  bottom: 2.5rem;
-}
-
 .bottom-20 {
   bottom: 5rem;
 }
@@ -645,10 +641,6 @@ video {
 
 .mt-5 {
   margin-top: 1.25rem;
-}
-
-.mt-\[30vh\] {
-  margin-top: 30vh;
 }
 
 .mt-\[80vh\] {
@@ -707,6 +699,10 @@ video {
   width: 2.5rem;
 }
 
+.w-\[10vw\] {
+  width: 10vw;
+}
+
 .w-full {
   width: 100%;
 }
@@ -733,6 +729,10 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .overflow-hidden {
@@ -980,6 +980,18 @@ body {
 
 .social-btn:hover {
   opacity: 1;
+}
+
+#welcome-spacer {
+  width: 20vw;
+  height: 30vh;
+  max-height: 30vh;
+}
+
+.animate-move-into-sidebar {
+  margin-left: 0;
+  font-size: smaller;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 /* this is an example of creating a custom style class for tailwind css

@@ -9,9 +9,13 @@
     <script src="../js/script.js" defer></script>
   </head>
   <body>
-    <div class="mx-auto h-[300vh] max-w-screen-lg relative">
-      <div class="fixed top-0 left-10 w-100 h-full flex flex-col mt-[30vh]">
-        <div class="flex items-center">
+    <div id="main-sect" class="mx-auto h-[300vh] max-w-screen-lg relative">
+      <div id="sidebar" class="fixed top-0 left-10 w-[10vw] h-full flex flex-col justify-between">
+        <div id="welcome-spacer">
+          
+        </div>
+        <span>
+          <div class="flex items-center">
           <hr class="hr-active" />
           <button
             class="text-white text-s mb-3 ml-3 navBtn"
@@ -48,8 +52,10 @@
             Contact
           </button>
         </div>
+        </span>
+        
 
-        <div id="social-btns" class="flex fixed bottom-10">
+        <div id="social-btns" class="flex mb-3">
           <a href="" class="group inline-block social-btn">
             <span>
               <svg
