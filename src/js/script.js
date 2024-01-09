@@ -9,8 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const aboutMeSectTop = aboutMeSect.offsetTop + 0.3 * window.innerHeight; // Start when aboutMeSect is 30vh from the top
   const projectSect = document.getElementById("projects");
 
+  const contactSect = document.getElementById("contact");
+  const projectSectTop = projectSect.offsetTop + 0.3 * window.innerHeight;
+  const svgLine3 = document.getElementById("scrollLine3");
+
   let aboutMeSectionVisible = false;
   let projectSectionVisible = false;
+  let contactSectionVisible = false;
 
   window.addEventListener("scroll", function () {
     const scrollPerc =
@@ -44,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       svgLine2.setAttribute("y2", draw2 + "%");
 
-      if (draw2 >= 90 && !projectSectionVisible) {
+      if (draw2 >= 100 && !projectSectionVisible) {
         projectSectionVisible = true;
         projectSect.style.display = "block";
         if (projectSect.classList.contains("fadeOut")) {
@@ -62,40 +67,77 @@ document.addEventListener("DOMContentLoaded", function () {
       // If the user hasn't scrolled past the "About Me" section, reset the second line
       svgLine2.setAttribute("y2", "0%");
     }
+
+    if (projectSectionVisible && window.scrollY >= projectSectTop) {
+      const scrollPerc3 =
+        (window.scrollY - projectSectTop) /
+        (document.documentElement.scrollHeight - projectSectTop);
+      const draw3 = 700 * scrollPerc3;
+
+      svgLine3.setAttribute("y2", draw3 + "%");
+
+      if (draw3 >= 90 && !contactSectionVisible) {
+        contactSectionVisible = true;
+        contactSect.style.display = "block";
+        if (contactSect.classList.contains("fadeOut")) {
+          contactSect.classList.remove("fadeOut");
+        }
+        contactSect.classList.add("fadeIn");
+      } else if (draw3 < 90 && contactSectionVisible) {
+        contactSectionVisible = false;
+        contactSect.style.display = "hidden";
+        contactSect.classList.remove("fadeIn");
+        contactSect.classList.add("fadeOut");
+        contactSect.style.display = "hidden";
+      }
+    } else {
+      // If the user hasn't scrolled past the "About Me" section, reset the second line
+      svgLine3.setAttribute("y2", "0%");
+    }
+
   });
 });
 
-function scrollToSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  }
-}
+
 
 function scrollToTop() {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 }
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    const offset = section.getBoundingClientRect().top + window.scrollY - (0.2 * window.innerHeight);
+    window.scrollTo({ top: offset, behavior: 'smooth' });
+  }
+}
 
 let sectionEls = document.getElementsByTagName("section"),
-  navBtns = document.getElementsByClassName("navBtn"),
-  i;
+  hrLines = document.getElementsByClassName("hr-active"),
+  currentlyActiveSection = 0;
 
-  window.onscroll = function () {
-    for (let i = 0; i < sectionEls.length; i++) {
-      if (
-        sectionEls[i] &&
-        navBtns[i] &&
-        window.scrollY > sectionEls[i].offsetTop &&
-        window.scrollY < sectionEls[i].offsetTop + sectionEls[i].offsetHeight
-      ) {
-        navBtns[i].classList.add("active");
-      } else {
-        if (navBtns[i] && navBtns[i].classList.contains("active")) {
-          setTimeout(() => {
-            navBtns[i].classList.remove("active");
-          }, 700);
-        }
-      }
+window.onscroll = function () {
+  let newActiveSection = null;
+
+  for (let i = 0; i < sectionEls.length; i++) {
+    if (
+      sectionEls[i] &&
+      window.scrollY > sectionEls[i].offsetTop * 0.70 &&
+      window.scrollY < sectionEls[i].offsetTop * 0.70  + sectionEls[i].offsetHeight
+    ) {
+      newActiveSection = i;
     }
-  };
+  }
+
+  if (newActiveSection !== null && newActiveSection !== currentlyActiveSection) {
+    // Remove active class from the previously active section
+    hrLines[currentlyActiveSection].classList.remove("active");
+
+    // Add active class to the new active section
+    hrLines[newActiveSection].classList.add("active");
+
+    // Update the currently active section index
+    currentlyActiveSection = newActiveSection;
+  }
+};
+
   

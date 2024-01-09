@@ -594,8 +594,8 @@ video {
   inset: 0px;
 }
 
-.right-0 {
-  right: 0px;
+.left-10 {
+  left: 2.5rem;
 }
 
 .top-0 {
@@ -619,6 +619,10 @@ video {
   margin-left: 5rem;
 }
 
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -631,12 +635,40 @@ video {
   margin-top: 1.25rem;
 }
 
+.mt-\[30vh\] {
+  margin-top: 30vh;
+}
+
+.mt-\[50vh\] {
+  margin-top: 50vh;
+}
+
+.mt-\[60vh\] {
+  margin-top: 60vh;
+}
+
+.mt-\[100vh\] {
+  margin-top: 100vh;
+}
+
+.mt-\[90vh\] {
+  margin-top: 90vh;
+}
+
+.mt-\[80vh\] {
+  margin-top: 80vh;
+}
+
 .block {
   display: block;
 }
 
 .inline-block {
   display: inline-block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -667,16 +699,12 @@ video {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
+.h-40 {
+  height: 10rem;
 }
 
 .w-1\/2 {
   width: 50%;
-}
-
-.w-36 {
-  width: 9rem;
 }
 
 .w-full {
@@ -891,9 +919,46 @@ body {
   background-color: #00FFFF;
 }
 
-.active {
-  font-weight: bold;
-  zoom: 1.1;
+.navBtn {
+  font-size: smaller;
+}
+
+/* .hr-active {
+  width: 100px;
+  height: 4px;
+  color: white;
+  padding-bottom: 3px;
+
+}
+
+.hr-active.active {
+  animation: hrGrow 0.5s ease-in;
+
+}
+
+@keyframes hrGrow {
+  0% {
+    width: 100px;
+  }
+
+  100% {
+    width: 130px;
+  }
+} */
+
+.hr-active {
+  width: 100px;
+  height: 4px;
+  background-color: #000;
+  transform-origin: left;
+  transition: width 0.5s, background-color 0.5s;
+  opacity: 0.7;
+}
+
+.hr-active.active {
+  width: 140px;
+  background-color: #00FFFF;
+  opacity: 1;
 }
 
 /* this is an example of creating a custom style class for tailwind css
