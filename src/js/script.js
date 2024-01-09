@@ -103,6 +103,9 @@ document.addEventListener("DOMContentLoaded", function () {
 function scrollToTop() {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 }
+
+document.getElementById("scroll-top").addEventListener("click", scrollToTop)
+
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   if (section) {
@@ -129,15 +132,30 @@ window.onscroll = function () {
   }
 
   if (newActiveSection !== null && newActiveSection !== currentlyActiveSection) {
-    // Remove active class from the previously active section
     hrLines[currentlyActiveSection].classList.remove("active");
 
-    // Add active class to the new active section
+
     hrLines[newActiveSection].classList.add("active");
 
-    // Update the currently active section index
     currentlyActiveSection = newActiveSection;
   }
 };
 
-  
+
+const socialBtns = Array.from(document.getElementsByClassName("social-btn"));
+
+socialBtns.forEach(element => {
+    const svgIcon = element.querySelector("svg");
+
+    if (svgIcon) {
+        element.addEventListener("mouseenter", () => {
+            svgIcon.classList.add("text-teal-500");
+        });
+
+        element.addEventListener("mouseleave", () => {
+            svgIcon.classList.remove("text-teal-500");
+        });
+    }
+});
+
+
