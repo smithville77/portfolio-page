@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
         projectSect.classList.add("fadeIn");
       } else if (draw2 < 90 && projectSectionVisible) {
         projectSectionVisible = false;
-        document.getElementById("projects-section").classList.add("hidden");
         projectSect.style.display = "hidden";
         projectSect.classList.remove("fadeIn");
         projectSect.classList.add("fadeOut");
@@ -90,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
         contactSect.style.display = "hidden";
         contactSect.classList.remove("fadeIn");
         contactSect.classList.add("fadeOut");
-        contactSect.style.display = "hidden";
       }
     } else {
       svgLine3.setAttribute("y2", "0%");

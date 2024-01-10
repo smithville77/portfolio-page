@@ -627,8 +627,8 @@ video {
   margin-bottom: 0.75rem;
 }
 
-.ml-10 {
-  margin-left: 2.5rem;
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .ml-20 {
@@ -695,10 +695,6 @@ video {
   height: 50vh;
 }
 
-.h-\[60vh\] {
-  height: 60vh;
-}
-
 .h-full {
   height: 100%;
 }
@@ -723,8 +719,8 @@ video {
   width: 100%;
 }
 
-.w-1\/4 {
-  width: 25%;
+.max-w-\[550px\] {
+  max-width: 550px;
 }
 
 .max-w-screen-lg {
@@ -733,6 +729,10 @@ video {
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.resize-none {
+  resize: none;
 }
 
 .grid-cols-2 {
@@ -767,6 +767,24 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-\[\#e0e0e0\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(224 224 224 / var(--tw-border-opacity));
+}
+
+.bg-\[\#6A64F1\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(106 100 241 / var(--tw-bg-opacity));
+}
+
 .bg-bubble {
   --tw-bg-opacity: 1;
   background-color: rgb(17 63 55 / var(--tw-bg-opacity));
@@ -775,6 +793,15 @@ video {
 .bg-card {
   --tw-bg-opacity: 1;
   background-color: rgb(50 50 121 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-12 {
+  padding: 3rem;
 }
 
 .p-3 {
@@ -791,9 +818,19 @@ video {
   padding-right: 1.5rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .py-4 {
@@ -807,10 +844,6 @@ video {
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pl-5 {
-  padding-left: 1.25rem;
 }
 
 .text-center {
@@ -841,12 +874,26 @@ video {
   font-weight: 700;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .font-semibold {
   font-weight: 600;
 }
 
 .italic {
   font-style: italic;
+}
+
+.text-\[\#07074D\] {
+  --tw-text-opacity: 1;
+  color: rgb(7 7 77 / var(--tw-text-opacity));
+}
+
+.text-\[\#6B7280\] {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .text-bubble-text {
@@ -864,6 +911,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -876,16 +928,30 @@ body {
   background-color: rgb(32, 32, 77);
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(3, 2, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00FFFF;
+  border-radius: 20px;
+  border: 3px solid black;
+}
+
 #about-me-sect {
   display: none;
 }
 
 .fadeIn {
-  animation: fadeIn 0.2s ease-in-out;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .fadeOut {
-  animation: fadeOut 0.2s ease-in-out;
+  animation: fadeOut 0.3s ease-in-out;
   opacity: 0;
 }
 
@@ -932,7 +998,7 @@ body {
   box-sizing: border-box;
 }
 
-.draw {
+/* .draw {
   position: relative;
   overflow: hidden;
 }
@@ -963,7 +1029,7 @@ body {
 .draw:hover::after {
   width: 100%;
   background-color: #00FFFF;
-}
+} */
 
 .navBtn {
   font-size: smaller;
@@ -1036,6 +1102,17 @@ body {
 
 
  <button class="btn-primary">Click me</button> */
+
+.focus\:border-\[\#6A64F1\]:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(106 100 241 / var(--tw-border-opacity));
+}
+
+.focus\:shadow-md:focus {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 
 @media (min-width: 768px) {
   .md\:grid-cols-2 {

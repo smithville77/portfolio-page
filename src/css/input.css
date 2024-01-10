@@ -15,7 +15,19 @@
 body {
   background-color: rgb(32, 32, 77);
 }
+body::-webkit-scrollbar {
+  width: 12px;     
+}
 
+body::-webkit-scrollbar-track {
+  background: rgb(3, 2, 0);  
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00FFFF;   
+  border-radius: 20px;      
+  border: 3px solid black; 
+}
 
 
 #about-me-sect {
@@ -23,13 +35,13 @@ body {
 }
 
 .fadeIn {
-  animation: fadeIn 0.2s ease-in-out;
+  animation: fadeIn 0.3s ease-in-out;
 
 }
 
 
 .fadeOut {
-  animation: fadeOut 0.2s ease-in-out;
+  animation: fadeOut 0.3s ease-in-out;
   opacity: 0;
 }
 
@@ -78,7 +90,7 @@ body {
   box-sizing: border-box;
 }
 
-.draw {
+/* .draw {
   position: relative;
   overflow: hidden;
 }
@@ -109,7 +121,7 @@ body {
 .draw:hover::after {
   width: 100%;
   background-color: #00FFFF;
-}
+} */
 
 
 
