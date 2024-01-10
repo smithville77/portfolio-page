@@ -23,13 +23,13 @@ body {
 }
 
 .fadeIn {
-  animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 0.2s ease-in-out;
 
 }
 
 
 .fadeOut {
-  animation: fadeOut 0.5s ease-in-out;
+  animation: fadeOut 0.2s ease-in-out;
   opacity: 0;
 }
 
@@ -175,7 +175,7 @@ body {
 .animate-move-into-sidebar {
   margin-left: 0;
   font-size: smaller;
-  animation: fadeIn 0.5s ease-in-out;
+  /* animation: fadeOut 0.5s ease-in-out; */
 }
 
 

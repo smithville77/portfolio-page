@@ -9,17 +9,27 @@
     <script src="../js/script.js" defer></script>
   </head>
   <body>
-    <div id="main-sect" class="mx-auto h-[300vh] max-w-screen-lg relative">
+    <div id="main-sect" class="mx-auto h-[300vh] max-w-screen-lg relative flex flex-col justify-center items-center">
       <div id="sidebar" class="fixed top-0 left-10 w-[10vw] h-full flex flex-col justify-between">
         <div id="welcome-spacer">
-          
+          <section id="introduction" class="text-white h-50 flex relative">
+            <!-- Introduction container -->
+            <div class="mt-10">
+              <h1 class="text-4xl font-bold">Hi</h1>
+              <p class="italic">Web Developer</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quidem,
+                eligendi quisquam error vel repudiandae rem odio ipsum modi harum.
+              </p>
+            </div>
+          </section>
         </div>
         <span>
           <div class="flex items-center">
           <hr class="hr-active" />
           <button
             class="text-white text-s mb-3 ml-3 navBtn"
-            onclick="scrollToSection('welcome-sect')"
+            onclick="scrollToTop()"
           >
             Welcome
           </button>
@@ -90,21 +100,22 @@
       </div>
 
       <!-- Hero Section -->
-      <section id="welcome-sect" class="text-white h-50 flex relative">
+      <section id="welcome-sect" class="text-white h-50 w-3/4 mt-20 p-3 flex justify-between items-center relative rounded bg-card">
         <!-- Introduction container -->
-        <div class="mt-20 ml-20 w-1/2">
+        <div class="">
           <h1 class="text-4xl font-bold">Hi</h1>
           <p class="italic">Web Developer</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quidem,
-            eligendi quisquam error vel repudiandae rem odio ipsum modi harum.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius maiores voluptatem suscipit, adipisci veniam possimus ipsa eos nihil accusamus iure dolorum assumenda cupiditate sunt facilis magnam sed nobis officiis commodi quo fugit id. Sed fugiat adipisci repudiandae nisi cum, voluptatibus explicabo quod tenetur ratione beatae fugit, sequi tempora iste praesentium, modi ipsa itaque atque ea. Suscipit deleniti sunt quibusdam dignissimos?
           </p>
         </div>
       </section>
+      
 
       <!-- SVG Line Container -->
-      <div id="svgContainer" class="h-[50vh] w-100 relative overflow-hidden">
-        <svg class="absolute inset-0 w-full h-full ml-20">
+      <div id="svgContainer" class="h-[50vh] w-3/4 relative flex justify-center  overflow-hidden">
+        <div class="w-10">
+<svg class="mx-auto w-full h-full flex justify-center">
           <line
             id="scrollLine"
             x1="0"
@@ -115,16 +126,22 @@
             stroke-width="8"
           ></line>
         </svg>
+        </div>
       </div>
+      
+      
 
-      <section id="about-me-sect" class="text-white h-20 flex relative">
-        <div class="mt-5 ml-20 w-1/2">
+      <section id="about-me-sect" class="text-white h-50 w-3/4 mt-10 p-3 flex justify-between items-center relative rounded bg-card">
+        <div class="">
           <h1 class="text-4xl font-bold">About Me</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et modi, dolore sunt aperiam distinctio necessitatibus animi eius repellendus. A minus libero magni obcaecati aut! Quidem molestias error nesciunt numquam!</p>
         </div>
       </section>
 
-      <div id="svgContainer2" class="h-[50vh] w-100 relative overflow-hidden">
-        <svg class="absolute inset-0 w-full h-full ml-20">
+     
+      <div id="svgContainer2" class="h-[50vh] w-3/4 relative flex justify-center  overflow-hidden">
+        <div class="w-10">
+<svg class="mx-auto w-full h-full flex justify-center">
           <line
             id="scrollLine2"
             x1="0"
@@ -135,16 +152,17 @@
             stroke-width="8"
           ></line>
         </svg>
+        </div>
       </div>
 
       <section
         id="projects"
         class="text-white h-20 flex relative flex justify-center items-center"
       >
-        <div class="mt-5 ml-20 w-full">
+        <div class="mt-5 ml-20 w-1/4">
           <h1 class="text-4xl font-bold mb-2">Projects</h1>
         </div>
-        <div id="projects-section" class="grid grid-cols-2 md:grid-cols-2">
+        <div id="projects-section" class="grid grid-cols-2 md:grid-cols-2 ml-10 hidden">
           <div
             class="max-w-sm mx-auto rounded overflow-hidden text-center cardHover draw"
           >
@@ -252,11 +270,11 @@
         </div>
       </section>
 
-      <div
+      <!-- <div
         id="svgContainer3"
         class="h-[50vh] w-100 mt-[80vh] relative overflow-hidden"
       >
-        <svg class="absolute inset-0 w-full h-full ml-20">
+        <svg class="absolute inset-0 w-full h-full">
           <line
             id="scrollLine3"
             x1="0"
@@ -267,6 +285,22 @@
             stroke-width="8"
           ></line>
         </svg>
+      </div> -->
+
+      <div id="svgContainer3" class="h-[50vh] mt-[80vh] w-3/4 relative flex justify-center overflow-hidden">
+        <div class="w-10">
+<svg class="mx-auto w-full h-full flex justify-center">
+          <line
+            id="scrollLine3"
+            x1="0"
+            y1="0"
+            x2="0"
+            y2="0%"
+            stroke="white"
+            stroke-width="8"
+          ></line>
+        </svg>
+        </div>
       </div>
 
       <section id="contact" class="text-white h-[60vh] relative">

@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (draw2 >= 100 && !projectSectionVisible) {
         projectSectionVisible = true;
+        document.getElementById("projects-section").classList.remove("hidden");
         projectSect.style.display = "block";
         if (projectSect.classList.contains("fadeOut")) {
           projectSect.classList.remove("fadeOut");
@@ -58,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         projectSect.classList.add("fadeIn");
       } else if (draw2 < 90 && projectSectionVisible) {
         projectSectionVisible = false;
+        document.getElementById("projects-section").classList.add("hidden");
         projectSect.style.display = "hidden";
         projectSect.classList.remove("fadeIn");
         projectSect.classList.add("fadeOut");
@@ -91,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
         contactSect.style.display = "hidden";
       }
     } else {
-      // If the user hasn't scrolled past the "About Me" section, reset the second line
       svgLine3.setAttribute("y2", "0%");
     }
 
@@ -124,8 +125,8 @@ window.onscroll = function () {
   for (let i = 0; i < sectionEls.length; i++) {
     if (
       sectionEls[i] &&
-      window.scrollY > sectionEls[i].offsetTop * 0.70 &&
-      window.scrollY < sectionEls[i].offsetTop * 0.70  + sectionEls[i].offsetHeight
+      window.scrollY > sectionEls[i].offsetTop  &&
+      window.scrollY < sectionEls[i].offsetTop  + sectionEls[i].offsetHeight
     ) {
       newActiveSection = i;
     }
@@ -142,59 +143,59 @@ window.onscroll = function () {
 };
 
 
-const socialBtns = Array.from(document.getElementsByClassName("social-btn"));
+// const socialBtns = Array.from(document.getElementsByClassName("social-btn"));
 
-socialBtns.forEach(element => {
-    const svgIcon = element.querySelector("svg");
+// socialBtns.forEach(element => {
+//     const svgIcon = element.querySelector("svg");
 
-    if (svgIcon) {
-        element.addEventListener("mouseenter", () => {
-            svgIcon.classList.add("text-teal-500");
-        });
+//     if (svgIcon) {
+//         element.addEventListener("mouseenter", () => {
+//             svgIcon.classList.add("text-teal-500");
+//         });
 
-        element.addEventListener("mouseleave", () => {
-            svgIcon.classList.remove("text-teal-500");
-        });
-    }
-});
+//         element.addEventListener("mouseleave", () => {
+//             svgIcon.classList.remove("text-teal-500");
+//         });
+//     }
+// });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const welcomeSection = document.getElementById("welcome-sect");
-  const sidebarContainer = document.getElementById("welcome-spacer");
-  const mainSect = document.getElementById("main-sect");
-  let isSidebarVisible = false;
+// document.addEventListener("DOMContentLoaded", function () {
+//   const welcomeSection = document.getElementById("welcome-sect");
+//   const sidebarContainer = document.getElementById("welcome-spacer");
+//   const mainSect = document.getElementById("main-sect");
+//   let isSidebarVisible = false;
 
-  const debounce = (func, delay) => {
-    let timeout;
-    return function () {
-      const context = this;
-      const args = arguments;
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(context, args), delay);
-    };
-  };
+//   const debounce = (func, delay) => {
+//     let timeout;
+//     return function () {
+//       const context = this;
+//       const args = arguments;
+//       clearTimeout(timeout);
+//       timeout = setTimeout(() => func.apply(context, args), delay);
+//     };
+//   };
 
-  const handleScroll = debounce(function () {
-    const scrollY = window.scrollY;
-    const threshold = 300;
+//   const handleScroll = debounce(function () {
+//     const scrollY = window.scrollY;
+//     const threshold = 100;
 
-    if (scrollY >= threshold && !isSidebarVisible) {
+//     if (scrollY >= threshold && !isSidebarVisible) {
     
-      sidebarContainer.append(welcomeSection);
-      welcomeSection.classList.add("animate-move-into-sidebar");
-      welcomeSection.querySelector("div").classList.remove("ml-20", "w-1/2");
-      isSidebarVisible = true;
-    } else if (scrollY < threshold && isSidebarVisible) {
+//       sidebarContainer.append(welcomeSection);
+//       welcomeSection.classList.add("animate-move-into-sidebar");
+//       welcomeSection.querySelector("div").classList.remove("ml-20", "w-1/2");
+//       isSidebarVisible = true;
+//     } else if (scrollY < threshold && isSidebarVisible) {
   
-      mainSect.prepend(welcomeSection);
-      welcomeSection.classList.remove("animate-move-into-sidebar", "fadeIn");
-      welcomeSection.querySelector("div").classList.add("mt-20", "ml-20", "w-1/2");
-      isSidebarVisible = false;
-    }
-  }, 100);
+//       mainSect.prepend(welcomeSection);
+//       welcomeSection.classList.remove("animate-move-into-sidebar", "fadeIn");
+//       welcomeSection.querySelector("div").classList.add("mt-20", "ml-20", "w-1/2");
+//       isSidebarVisible = false;
+//     }
+//   }, 300);
 
-  window.addEventListener("scroll", handleScroll);
-});
+//   window.addEventListener("scroll", handleScroll);
+// });
 
 

@@ -615,12 +615,20 @@ video {
   margin-right: auto;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
 
 .mb-3 {
   margin-bottom: 0.75rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
 }
 
 .ml-20 {
@@ -633,6 +641,10 @@ video {
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .mt-20 {
@@ -699,12 +711,20 @@ video {
   width: 2.5rem;
 }
 
+.w-3\/4 {
+  width: 75%;
+}
+
 .w-\[10vw\] {
   width: 10vw;
 }
 
 .w-full {
   width: 100%;
+}
+
+.w-1\/4 {
+  width: 25%;
 }
 
 .max-w-screen-lg {
@@ -752,6 +772,15 @@ video {
   background-color: rgb(17 63 55 / var(--tw-bg-opacity));
 }
 
+.bg-card {
+  --tw-bg-opacity: 1;
+  background-color: rgb(50 50 121 / var(--tw-bg-opacity));
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -778,6 +807,10 @@ video {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pl-5 {
+  padding-left: 1.25rem;
 }
 
 .text-center {
@@ -848,11 +881,11 @@ body {
 }
 
 .fadeIn {
-  animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 0.2s ease-in-out;
 }
 
 .fadeOut {
-  animation: fadeOut 0.5s ease-in-out;
+  animation: fadeOut 0.2s ease-in-out;
   opacity: 0;
 }
 
@@ -991,7 +1024,7 @@ body {
 .animate-move-into-sidebar {
   margin-left: 0;
   font-size: smaller;
-  animation: fadeIn 0.5s ease-in-out;
+  /* animation: fadeOut 0.5s ease-in-out; */
 }
 
 /* this is an example of creating a custom style class for tailwind css
