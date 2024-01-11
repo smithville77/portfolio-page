@@ -90,6 +90,11 @@ body::-webkit-scrollbar-thumb {
   box-sizing: border-box;
 }
 
+.header-container {
+  transform: translate(-20%, -50%);
+  background-color: aquamarine;
+}
+
 /* .draw {
   position: relative;
   overflow: hidden;

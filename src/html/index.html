@@ -103,7 +103,10 @@
       <section id="welcome-sect" class="text-white h-50 w-3/4 mt-20 mb-10 p-3 flex justify-between items-center relative rounded bg-card">
         <!-- Introduction container -->
         <div class="">
-          <h1 class="text-4xl font-bold">Welcome</h1>
+          <div class="header-container rounded w-1/4 p-2">
+            <h1 class="text-4xl font-bold">Welcome</h1>
+          </div>
+          
           <p class="italic">Web Developer</p>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius maiores voluptatem suscipit, adipisci veniam possimus ipsa eos nihil accusamus iure dolorum assumenda cupiditate sunt facilis magnam sed nobis officiis commodi quo fugit id. Sed fugiat adipisci repudiandae nisi cum, voluptatibus explicabo quod tenetur ratione beatae fugit, sequi tempora iste praesentium, modi ipsa itaque atque ea. Suscipit deleniti sunt quibusdam dignissimos?
@@ -131,10 +134,53 @@
       
       
 
-      <section id="about-me-sect" class="text-white h-50 w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card">
+      <section id="about-me-sect" class="text-white h-fit w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card">
         <div class="">
-          <h1 class="text-4xl font-bold">About Me</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et modi, dolore sunt aperiam distinctio necessitatibus animi eius repellendus. A minus libero magni obcaecati aut! Quidem molestias error nesciunt numquam!</p>
+          <div class="header-container rounded w-1/4 p-2">
+            <h1 class="text-4xl font-bold">About Me</h1>
+          </div>
+          <span id="experience" class="h-fit w-full grid grid-cols-2 gap-4">
+            
+              <div class="col-span-2">Experience</div>
+              <div class="...">Novemer 1 - 31 December</div>
+              <div class="...">
+                <span>
+                  <h4>Web Dev</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloribus!</p>
+              </span>
+            </div>
+              <div class="...">Web Something</div>
+              <div class="...">
+                <span>
+                  <h4>Asset Management Council</h4>
+                  <em>Junior Web Developer</em>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloribus!</p>
+              </span>
+              </div>
+        
+          </span>
+          <span id="education" class="h-fit w-full grid grid-cols-2 gap-4">
+            <div class="col-span-2"><h3>Education</h3></div>
+            <div class="...">Holmesglen</div>
+            <div class="...">
+              <span>
+                <h4>Asset Management Council</h4>
+                <em>Junior Web Developer</em>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloribus!</p>
+            </span>
+            </div>
+            <div class="...">General Assembly</div>
+            <div class="...">
+              <span>
+                <h4>Asset Management Council</h4>
+                <em>Junior Web Developer</em>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloribus!</p>
+            </span>
+            </div>
+            
+          </span>
+          
+          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et modi, dolore sunt aperiam distinctio necessitatibus animi eius repellendus. A minus libero magni obcaecati aut! Quidem molestias error nesciunt numquam!</p> -->
         </div>
       </section>
 
@@ -157,10 +203,13 @@
 
       <section
         id="projects"
-        class="text-white h-20 flex relative flex items-center rounded bg-card"
+        class="text-white h-20 w-3/4 flex relative flex items-center rounded bg-card"
       >
-        <div class="mt-5 ml-20 w-full">
-          <h1 class="text-4xl font-bold mb-2">Projects</h1>
+        <div class="mt-5 w-full">
+          <div class="header-container rounded w-fit p-2">
+            <h1 class="text-4xl font-bold mb-2">Projects</h1>
+          </div>
+          
         </div>
         <div id="projects-section" class="grid grid-cols-2 md:grid-cols-2 hidden">
           <div
@@ -303,10 +352,13 @@
         </div>
       </div>
 
-      <section id="contact" class="text-white h-50 w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card mb-50 "
+      <section id="contact" class="text-white h-50 w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card mb-50"
       >
         <div>
-          <h1 class="text-4xl font-bold">Contact</h1>
+          <div class="w-full">
+            <div class="header-container rounded w-fit p-2">
+              <h1 class="text-4xl font-bold mb-2">Contact</h1>
+            </div>
           <!-- component -->
 <div class="flex items-center justify-center p-12">
   <!-- Author: FormBold Team -->
