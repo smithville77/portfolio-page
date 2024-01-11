@@ -4,13 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome.</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link href="../css/output.css" rel="stylesheet" />
     <script src="../js/script.js" defer></script>
   </head>
   <body>
-    <div id="main-sect" class="mx-auto h-[300vh] max-w-screen-lg relative flex flex-col justify-center items-center">
-      <div id="sidebar" class="fixed top-0 left-10 w-[10vw] h-full flex flex-col justify-between">
+    <div
+      id="main-sect"
+      class="mx-auto h-fit max-w-screen-lg relative flex flex-col justify-center items-center"
+    >
+      <div
+        id="sidebar"
+        class="fixed top-0 left-10 w-[10vw] h-full flex flex-col justify-between"
+      >
         <div id="welcome-spacer">
           <section id="introduction" class="text-white h-50 flex relative">
             <!-- Introduction container -->
@@ -18,52 +27,52 @@
               <h1 class="text-4xl font-bold">Hi</h1>
               <p class="italic">Web Developer</p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quidem,
-                eligendi quisquam error vel repudiandae rem odio ipsum modi harum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+                quidem, eligendi quisquam error vel repudiandae rem odio ipsum
+                modi harum.
               </p>
             </div>
           </section>
         </div>
         <span>
           <div class="flex items-center">
-          <hr class="hr-active" />
-          <button
-            class="text-white text-s mb-3 ml-3 navBtn"
-            onclick="scrollToTop()"
-          >
-            Welcome
-          </button>
-        </div>
-        <div class="flex items-center">
-          <hr class="hr-active" />
-          <button
-            class="text-white text-s mb-3 ml-3 navBtn"
-            onclick="scrollToSection('about-me-sect')"
-          >
-            About
-          </button>
-        </div>
+            <hr class="hr-active" />
+            <button
+              class="text-white text-s mb-3 ml-3 navBtn"
+              onclick="scrollToTop()"
+            >
+              Welcome
+            </button>
+          </div>
+          <div class="flex items-center">
+            <hr class="hr-active" />
+            <button
+              class="text-white text-s mb-3 ml-3 navBtn"
+              onclick="scrollToSection('about-me-sect')"
+            >
+              About
+            </button>
+          </div>
 
-        <div class="flex items-center">
-          <hr class="hr-active" />
-          <button
-            class="text-white text-s mb-3 ml-3 navBtn"
-            onclick="scrollToSection('projects')"
-          >
-            Projects
-          </button>
-        </div>
-        <div class="flex items-center">
-          <hr class="hr-active" />
-          <button
-            class="text-white text-s ml-3 navBtn"
-            onclick="scrollToSection('contact')"
-          >
-            Contact
-          </button>
-        </div>
+          <div class="flex items-center">
+            <hr class="hr-active" />
+            <button
+              class="text-white text-s mb-3 ml-3 navBtn"
+              onclick="scrollToSection('projects')"
+            >
+              Projects
+            </button>
+          </div>
+          <div class="flex items-center">
+            <hr class="hr-active" />
+            <button
+              class="text-white text-s ml-3 navBtn"
+              onclick="scrollToSection('contact')"
+            >
+              Contact
+            </button>
+          </div>
         </span>
-        
 
         <div id="social-btns" class="flex mb-3">
           <a href="" class="group inline-block social-btn">
@@ -76,7 +85,7 @@
                 height="50"
                 viewBox="0 0 64 64"
               >
-                <path 
+                <path
                   d="M32,10c12.15,0,22,9.85,22,22c0,9.768-6.369,18.045-15.179,20.916c0.002-0.008,0.006-0.021,0.006-0.021	s-1.485-0.696-1.453-1.938c0.035-1.367,0-4.556,0-5.727c0-2.01-1.272-3.434-1.272-3.434s9.977,0.112,9.977-10.533	c0-4.107-2.147-6.245-2.147-6.245s1.128-4.385-0.39-6.245c-1.701-0.184-4.749,1.626-6.05,2.472c0,0-2.062-0.846-5.492-0.846	c-3.43,0-5.492,0.846-5.492,0.846c-1.301-0.846-4.348-2.656-6.05-2.472c-1.518,1.86-0.39,6.245-0.39,6.245s-2.147,2.137-2.147,6.245	c0,10.645,9.977,10.533,9.977,10.533s-1.005,1.136-1.225,2.806c-0.696,0.236-1.721,0.528-2.549,0.528	c-2.165,0-3.812-2.105-4.416-3.078c-0.595-0.96-1.815-1.766-2.953-1.766c-0.749,0-1.115,0.375-1.115,0.803s1.05,0.727,1.743,1.521	c1.461,1.674,1.435,5.438,6.641,5.438c0.565,0,1.719-0.139,2.588-0.256c-0.005,1.185-0.007,2.436,0.012,3.167	c0.031,1.242-1.453,1.938-1.453,1.938s0.004,0.012,0.006,0.021C16.369,50.045,10,41.768,10,32C10,19.85,19.85,10,32,10z"
                 ></path>
               </svg>
@@ -85,38 +94,47 @@
 
           <a href="" class="group inline-block"
             ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="50"
-                height="50"
-                viewBox="0 0 64 64"
-                class="social-btn"
-              >
-                <path
-                  d="M40.227,12C51.145,12,52,12.854,52,23.773v16.453C52,51.145,51.145,52,40.227,52H23.773C12.855,52,12,51.145,12,40.227	V23.773C12,12.854,12.855,12,23.773,12H40.227z M25.029,43V26.728h-5.057V43H25.029z M22.501,24.401	c1.625,0,2.947-1.322,2.947-2.949c0-1.625-1.322-2.947-2.947-2.947c-1.629,0-2.949,1.32-2.949,2.947S20.87,24.401,22.501,24.401z M44,43v-8.925c0-4.382-0.946-7.752-6.067-7.752c-2.46,0-4.109,1.349-4.785,2.628H33.08v-2.223h-4.851V43h5.054v-8.05	c0-2.122,0.405-4.178,3.036-4.178c2.594,0,2.628,2.427,2.628,4.315V43H44z"
-                ></path></svg></a>
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="50"
+              height="50"
+              viewBox="0 0 64 64"
+              class="social-btn"
+            >
+              <path
+                d="M40.227,12C51.145,12,52,12.854,52,23.773v16.453C52,51.145,51.145,52,40.227,52H23.773C12.855,52,12,51.145,12,40.227	V23.773C12,12.854,12.855,12,23.773,12H40.227z M25.029,43V26.728h-5.057V43H25.029z M22.501,24.401	c1.625,0,2.947-1.322,2.947-2.949c0-1.625-1.322-2.947-2.947-2.947c-1.629,0-2.949,1.32-2.949,2.947S20.87,24.401,22.501,24.401z M44,43v-8.925c0-4.382-0.946-7.752-6.067-7.752c-2.46,0-4.109,1.349-4.785,2.628H33.08v-2.223h-4.851V43h5.054v-8.05	c0-2.122,0.405-4.178,3.036-4.178c2.594,0,2.628,2.427,2.628,4.315V43H44z"
+              ></path></svg
+          ></a>
         </div>
       </div>
 
       <!-- Hero Section -->
-      <section id="welcome-sect" class="text-white h-50 w-3/4 mt-20 mb-10 p-3 flex justify-between items-center relative rounded bg-card">
+      <section
+        id="welcome-sect"
+        class="text-white h-50 w-3/4 mt-20 mb-10 p-3 flex justify-between items-center relative rounded bg-card"
+      >
         <!-- Introduction container -->
         <div class="">
           <div class="header-container rounded w-1/4 p-2">
             <h1 class="text-4xl font-bold">Welcome</h1>
           </div>
-          
+
           <p class="italic">Web Developer</p>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius maiores voluptatem suscipit, adipisci veniam possimus ipsa eos nihil accusamus iure dolorum assumenda cupiditate sunt facilis magnam sed nobis officiis commodi quo fugit id. Sed fugiat adipisci repudiandae nisi cum, voluptatibus explicabo quod tenetur ratione beatae fugit, sequi tempora iste praesentium, modi ipsa itaque atque ea. Suscipit deleniti sunt quibusdam dignissimos?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius
+            maiores voluptatem suscipit, adipisci veniam possimus ipsa eos nihil
+            accusamus iure dolorum assumenda cupiditate sunt facilis magnam sed
+            nobis officiis commodi quo fugit id. Sed fugiat adipisci repudiandae
+            nisi cum, voluptatibus explicabo quod tenetur ratione beatae fugit,
+            sequi tempora iste praesentium, modi ipsa itaque atque ea. Suscipit
+            deleniti sunt quibusdam dignissimos?
           </p>
         </div>
       </section>
-      
 
       <!-- SVG Line Container -->
-      <div id="svgContainer" class="h-[50vh] w-3/4 relative flex justify-center  overflow-hidden">
+      <!-- <div id="svgContainer" class="h-[15vh] w-3/4 relative flex justify-center  overflow-hidden">
         <div class="w-10">
 <svg class="mx-auto w-full h-full flex justify-center">
           <line
@@ -131,33 +149,39 @@
         </svg>
         </div>
       </div>
-      
-      
+       -->
 
-      <section id="about-me-sect" class="text-white h-fit w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card">
+      <section
+        id="about-me-sect"
+        class="text-white h-fit w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card"
+      >
         <div class="">
           <div class="header-container rounded w-1/4 p-2">
             <h1 class="text-4xl font-bold">About Me</h1>
           </div>
           <span id="experience" class="h-fit w-full grid grid-cols-2 gap-4">
-            
-              <div class="col-span-2">Experience</div>
-              <div class="...">Novemer 1 - 31 December</div>
-              <div class="...">
-                <span>
-                  <h4>Web Dev</h4>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloribus!</p>
+            <div class="col-span-2">Experience</div>
+            <div class="...">Novemer 1 - 31 December</div>
+            <div class="...">
+              <span>
+                <h4>Web Dev</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Excepturi, doloribus!
+                </p>
               </span>
             </div>
-              <div class="...">Web Something</div>
-              <div class="...">
-                <span>
-                  <h4>Asset Management Council</h4>
-                  <em>Junior Web Developer</em>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloribus!</p>
+            <div class="...">Web Something</div>
+            <div class="...">
+              <span>
+                <h4>Asset Management Council</h4>
+                <em>Junior Web Developer</em>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Excepturi, doloribus!
+                </p>
               </span>
-              </div>
-        
+            </div>
           </span>
           <span id="education" class="h-fit w-full grid grid-cols-2 gap-4">
             <div class="col-span-2"><h3>Education</h3></div>
@@ -166,26 +190,38 @@
               <span>
                 <h4>Asset Management Council</h4>
                 <em>Junior Web Developer</em>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloribus!</p>
-            </span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Excepturi, doloribus!
+                </p>
+              </span>
             </div>
             <div class="...">General Assembly</div>
             <div class="...">
               <span>
                 <h4>Asset Management Council</h4>
                 <em>Junior Web Developer</em>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, doloribus!</p>
-            </span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Excepturi, doloribus!
+                </p>
+              </span>
             </div>
-            
           </span>
-          
-          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas et modi, dolore sunt aperiam distinctio necessitatibus animi eius repellendus. A minus libero magni obcaecati aut! Quidem molestias error nesciunt numquam!</p> -->
         </div>
+        <span class="flex justify-end mt-5 p-3">
+          <button
+            class="m-4 p-1 rounded-full from-teal-400 via-indigo-500 to-fuchsia-500 bg-gradient-to-r"
+          >
+            <span
+              class="block text-black px-4 py-2 font-semibold rounded-full bg-white hover:bg-transparent hover:text-white transition"
+              >Download Full Resume</span
+            >
+          </button>
+        </span>
       </section>
 
-     
-      <div id="svgContainer2" class="h-[50vh] w-3/4 mb-10 relative flex justify-center  overflow-hidden">
+      <!-- <div id="svgContainer2" class="h-[20vh] w-3/4 mb-10 relative flex justify-center  overflow-hidden">
         <div class="w-10">
 <svg class="mx-auto w-full h-full flex justify-center">
           <line
@@ -199,21 +235,23 @@
           ></line>
         </svg>
         </div>
-      </div>
+      </div> -->
 
       <section
         id="projects"
-        class="text-white h-20 w-3/4 flex relative flex items-center rounded bg-card"
+        class="text-white h-fit w-3/4 flex relative flex items-center rounded bg-card"
       >
         <div class="mt-5 w-full">
           <div class="header-container rounded w-fit p-2">
             <h1 class="text-4xl font-bold mb-2">Projects</h1>
           </div>
-          
         </div>
-        <div id="projects-section" class="grid grid-cols-2 md:grid-cols-2 hidden">
+        <div
+          id="projects-section"
+          class="grid grid-cols-2 md:grid-cols-2 hidden rounded bg-card"
+        >
           <div
-            class="max-w-sm mx-auto rounded overflow-hidden text-center bg-card cardHover"
+            class="max-w-sm mx-auto rounded overflow-hidden text-center cardHover"
           >
             <div class="px-6 py-4">
               <div class="font-bold text-xl mb-2">Project 1</div>
@@ -336,7 +374,7 @@
         </svg>
       </div> -->
 
-      <div id="svgContainer3" class="h-[50vh] mt-[80vh] mb-10 w-3/4 relative flex justify-center overflow-hidden">
+      <!-- <div id="svgContainer3" class="h-[20vh] mt-[90vh] mb-10 w-3/4 relative flex justify-center overflow-hidden">
         <div class="w-10">
 <svg class="mx-auto w-full h-full flex justify-center">
           <line
@@ -350,102 +388,110 @@
           ></line>
         </svg>
         </div>
-      </div>
+      </div> -->
 
-      <section id="contact" class="text-white h-50 w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card mb-50"
+      <section
+        id="contact"
+        class="text-white h-50 w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card mb-50"
       >
         <div>
           <div class="w-full">
-            <div class="header-container rounded w-fit p-2">
-              <h1 class="text-4xl font-bold mb-2">Contact</h1>
+            <div class="header-container rounded w-fit p-3">
+              <h1 class="text-4xl font-bold">Contact</h1>
             </div>
-          <!-- component -->
-<div class="flex items-center justify-center p-12">
-  <!-- Author: FormBold Team -->
-  <!-- Learn More: https://formbold.com -->
-  <div class="mx-auto w-full max-w-[550px]">
-    <form action="https://formbold.com/s/FORM_ID" method="POST">
-      <div class="mb-5">
-        <label
-          for="name"
-          class="mb-3 block text-base font-medium text-[#07074D]"
-        >
-          Full Name
-        </label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Full Name"
-          class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-        />
-      </div>
-      <div class="mb-5">
-        <label
-          for="email"
-          class="mb-3 block text-base font-medium text-[#07074D]"
-        >
-          Email Address
-        </label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="example@domain.com"
-          class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-        />
-      </div>
-      <div class="mb-5">
-        <label
-          for="subject"
-          class="mb-3 block text-base font-medium text-[#07074D]"
-        >
-          Subject
-        </label>
-        <input
-          type="text"
-          name="subject"
-          id="subject"
-          placeholder="Enter your subject"
-          class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-        />
-      </div>
-      <div class="mb-5">
-        <label
-          for="message"
-          class="mb-3 block text-base font-medium text-[#07074D]"
-        >
-          Message
-        </label>
-        <textarea
-          rows="4"
-          name="message"
-          id="message"
-          placeholder="Type your message"
-          class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-        ></textarea>
-      </div>
-      <div>
-        <button
-          class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none"
-        >
-          Submit
-        </button>
-      </div>
-    </form>
-  </div>
-</div>
-        </div>
-      </section>
 
-      <!-- Work Experience, Education, Projects, Contact sections -->
+            <!-- component -->
+            <div class="flex items-center justify-center p-12">
+              <div class="mx-auto w-full max-w-[550px]">
+                <form action="" method="POST">
+                  <div class="mb-5">
+                    <label
+                      for="name"
+                      class="mb-3 block text-base font-medium text-[#07074D]"
+                    >
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Full Name"
+                      class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    />
+                  </div>
+                  <div class="mb-5">
+                    <label
+                      for="email"
+                      class="mb-3 block text-base font-medium text-[#07074D]"
+                    >
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="example@domain.com"
+                      class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    />
+                  </div>
+                  <div class="mb-5">
+                    <label
+                      for="subject"
+                      class="mb-3 block text-base font-medium text-[#07074D]"
+                    >
+                      Subject
+                    </label>
+                    <input
+                      type="text"
+                      name="subject"
+                      id="subject"
+                      placeholder="Enter your subject"
+                      class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    />
+                  </div>
+                  <div class="mb-5">
+                    <label
+                      for="message"
+                      class="mb-3 block text-base font-medium text-[#07074D]"
+                    >
+                      Message
+                    </label>
+                    <textarea
+                      rows="4"
+                      name="message"
+                      id="message"
+                      placeholder="Type your message"
+                      class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    ></textarea>
+                  </div>
+                  <div>
+                    <button
+                      class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Work Experience, Education, Projects, Contact sections -->
+        </div>
+        
+
+        <!-- npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch -->
+      </section>
+      <button
+          id="scroll-top"
+          class="fixed bottom-20 right-10 h-10 w-10 rounded-full bg-bubble"
+        >
+          <span
+            class="material-symbols-outlined flex justify-center items-center"
+          >
+            keyboard_arrow_up
+          </span>
+        </button>
     </div>
-    <button id="scroll-top" class="fixed bottom-20 right-10 h-10 w-10 rounded-full bg-bubble">
-      <span class="material-symbols-outlined flex justify-center items-center">
-        keyboard_arrow_up
-        </span>
-    </button>
   </body>
 </html>
-
-<!-- npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch -->

@@ -30,9 +30,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-#about-me-sect {
+/* #about-me-sect {
   display: none;
-}
+} */
 
 .fadeIn {
   animation: fadeIn 0.3s ease-in-out;
@@ -85,7 +85,7 @@ body::-webkit-scrollbar-thumb {
   padding: 1em 2em;
   font-size: inherit;
   font-weight: 700;
-  background: none;
+  /* background: none; */
   border: 0;
   box-sizing: border-box;
 }

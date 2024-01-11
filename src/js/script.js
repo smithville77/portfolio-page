@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const svgContainer = document.getElementById("svgContainer");
-  const svgLine = document.getElementById("scrollLine");
-  const containerHeight = svgContainer.clientHeight;
+  // const svgContainer = document.getElementById("svgContainer");
+  // const svgLine = document.getElementById("scrollLine");
+  const mainSect = document.getElementById("main-sect")
+  const containerHeight = mainSect.clientHeight;
   const aboutMeSect = document.getElementById("about-me-sect");
 
-  const svgContainer2 = document.getElementById("svgContainer2");
-  const svgLine2 = document.getElementById("scrollLine2");
-  const aboutMeSectTop = aboutMeSect.offsetTop + 0.3 * window.innerHeight; // Start when aboutMeSect is 30vh from the top
+  // const svgContainer2 = document.getElementById("svgContainer2");
+  // const svgLine2 = document.getElementById("scrollLine2");
+  const aboutMeSectTop = aboutMeSect.offsetTop + 0.1 * window.innerHeight; // Start when aboutMeSect is 30vh from the top
   const projectSect = document.getElementById("projects");
 
   const contactSect = document.getElementById("contact");
-  const projectSectTop = projectSect.offsetTop + 0.3 * window.innerHeight;
-  const svgLine3 = document.getElementById("scrollLine3");
+  const projectSectTop = projectSect.offsetTop + 0.1 * window.innerHeight;
+  // const svgLine3 = document.getElementById("scrollLine3");
 
   let aboutMeSectionVisible = false;
   let projectSectionVisible = false;
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       (document.documentElement.scrollHeight - containerHeight);
     const draw = 700 * scrollPerc;
 
-    svgLine.setAttribute("y2", draw + "%");
+    // svgLine.setAttribute("y2", draw + "%");
 
     if (draw >= 90 && !aboutMeSectionVisible) {
       aboutMeSectionVisible = true;
@@ -47,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         (document.documentElement.scrollHeight - aboutMeSectTop);
       const draw2 = 700 * scrollPerc2;
 
-      svgLine2.setAttribute("y2", draw2 + "%");
+      // svgLine2.setAttribute("y2", draw2 + "%");
 
       if (draw2 >= 100 && !projectSectionVisible) {
         projectSectionVisible = true;
@@ -66,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     } else {
       // If the user hasn't scrolled past the "About Me" section, reset the second line
-      svgLine2.setAttribute("y2", "0%");
+      // svgLine2.setAttribute("y2", "0%");
     }
 
     if (projectSectionVisible && window.scrollY >= projectSectTop) {
@@ -75,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         (document.documentElement.scrollHeight - projectSectTop);
       const draw3 = 700 * scrollPerc3;
 
-      svgLine3.setAttribute("y2", draw3 + "%");
+      // svgLine3.setAttribute("y2", draw3 + "%");
 
       if (draw3 >= 90 && !contactSectionVisible) {
         contactSectionVisible = true;
@@ -91,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contactSect.classList.add("fadeOut");
       }
     } else {
-      svgLine3.setAttribute("y2", "0%");
+      // svgLine3.setAttribute("y2", "0%");
     }
 
   });
@@ -108,7 +109,7 @@ document.getElementById("scroll-top").addEventListener("click", scrollToTop)
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   if (section) {
-    const offset = section.getBoundingClientRect().top + window.scrollY - (0.2 * window.innerHeight);
+    const offset = section.getBoundingClientRect().top + window.scrollY - (0.11 * window.innerHeight);
     window.scrollTo({ top: offset, behavior: 'smooth' });
   }
 }
@@ -117,28 +118,28 @@ let sectionEls = document.getElementsByTagName("section"),
   hrLines = document.getElementsByClassName("hr-active"),
   currentlyActiveSection = 0;
 
-window.onscroll = function () {
-  let newActiveSection = null;
-
-  for (let i = 0; i < sectionEls.length; i++) {
-    if (
-      sectionEls[i] &&
-      window.scrollY > sectionEls[i].offsetTop  &&
-      window.scrollY < sectionEls[i].offsetTop  + sectionEls[i].offsetHeight
-    ) {
-      newActiveSection = i;
+  window.onscroll = function () {
+    let newActiveSection = null;
+  
+    for (let i = 0; i < sectionEls.length; i++) {
+      const sectionTop = sectionEls[i].offsetTop;
+      const sectionBottom = sectionTop + sectionEls[i].offsetHeight;
+  
+      if (
+        window.scrollY >= sectionTop &&
+        window.scrollY < sectionBottom
+      ) {
+        newActiveSection = i;
+      }
     }
-  }
-
-  if (newActiveSection !== null && newActiveSection !== currentlyActiveSection) {
-    hrLines[currentlyActiveSection].classList.remove("active");
-
-
-    hrLines[newActiveSection].classList.add("active");
-
-    currentlyActiveSection = newActiveSection;
-  }
-};
+  
+    if (newActiveSection !== null && newActiveSection !== currentlyActiveSection) {
+      hrLines[currentlyActiveSection].classList.remove("active");
+      hrLines[newActiveSection].classList.add("active");
+      currentlyActiveSection = newActiveSection;
+    }
+  };
+  
 
 
 // const socialBtns = Array.from(document.getElementsByClassName("social-btn"));
