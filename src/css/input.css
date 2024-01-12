@@ -182,7 +182,9 @@ p {
   opacity: 1;
 } */
 
-
+.hr-nav-container {
+  font-size: 16px;
+}
 .hr-nav-container:hover .hr-active {
   width: 150px;
   transform-origin: left;
@@ -193,14 +195,16 @@ p {
 .social-btn{
   opacity: 0.6;
   mix-blend-mode: difference;
-  color: rgb(255, 4, 4);
+
 }
 
 .social-btn:hover {
   opacity: 1;
  
 }
-
+#social-btns-footer {
+  color: white;
+}
 
 
 #welcome-spacer {
