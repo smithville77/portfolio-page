@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // const svgContainer = document.getElementById("svgContainer");
   // const svgLine = document.getElementById("scrollLine");
-  const mainSect = document.getElementById("main-sect")
+  const mainSect = document.getElementById("main-sect");
   const containerHeight = mainSect.clientHeight;
   const aboutMeSect = document.getElementById("about-me-sect");
 
@@ -94,23 +94,23 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       // svgLine3.setAttribute("y2", "0%");
     }
-
   });
 });
-
-
 
 function scrollToTop() {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 }
 
-document.getElementById("scroll-top").addEventListener("click", scrollToTop)
+document.getElementById("scroll-top").addEventListener("click", scrollToTop);
 
 function scrollToSection(sectionId) {
   const section = document.getElementById(sectionId);
   if (section) {
-    const offset = section.getBoundingClientRect().top + window.scrollY - (0.11 * window.innerHeight);
-    window.scrollTo({ top: offset, behavior: 'smooth' });
+    const offset =
+      section.getBoundingClientRect().top +
+      window.scrollY -
+      0.11 * window.innerHeight;
+    window.scrollTo({ top: offset, behavior: "smooth" });
   }
 }
 
@@ -125,17 +125,19 @@ window.onscroll = function () {
     const sectionTop = sectionEls[i].offsetTop;
     const sectionBottom = sectionTop + sectionEls[i].offsetHeight;
 
-    if (
-      window.scrollY >= sectionTop &&
-      window.scrollY < sectionBottom
-    ) {
+    if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
       newActiveSection = i;
     }
   }
 
   // Exclude the footer from adding/removing the "active" class
-  const isFooter = document.body.scrollHeight - window.innerHeight === window.scrollY;
-  if (!isFooter && newActiveSection !== null && newActiveSection !== currentlyActiveSection) {
+  const isFooter =
+    document.body.scrollHeight - window.innerHeight === window.scrollY;
+  if (
+    !isFooter &&
+    newActiveSection !== null &&
+    newActiveSection !== currentlyActiveSection
+  ) {
     if (hrLines[currentlyActiveSection]) {
       hrLines[currentlyActiveSection].classList.remove("active");
     }
@@ -149,16 +151,14 @@ window.onscroll = function () {
 };
 
 function footerDate() {
-  const footerDate = document.getElementById('footer-date');
- 
+  const footerDate = document.getElementById("footer-date");
+
   const date = new Date();
   const year = date.getFullYear();
   // const day = date.getDay();
-  footerDate.innerText = `© Adam Smith ${year}`
+  footerDate.innerText = `© Adam Smith ${year}`;
 }
-footerDate()
-
-
+footerDate();
 
 // const date = footerDate();
 // console.log(date)
@@ -177,7 +177,6 @@ footerDate()
 //         });
 //     }
 // });
-
 
 // document.addEventListener("DOMContentLoaded", function () {
 //   const welcomeSection = document.getElementById("welcome-sect");
@@ -200,13 +199,13 @@ footerDate()
 //     const threshold = 100;
 
 //     if (scrollY >= threshold && !isSidebarVisible) {
-    
+
 //       sidebarContainer.append(welcomeSection);
 //       welcomeSection.classList.add("animate-move-into-sidebar");
 //       welcomeSection.querySelector("div").classList.remove("ml-20", "w-1/2");
 //       isSidebarVisible = true;
 //     } else if (scrollY < threshold && isSidebarVisible) {
-  
+
 //       mainSect.prepend(welcomeSection);
 //       welcomeSection.classList.remove("animate-move-into-sidebar", "fadeIn");
 //       welcomeSection.querySelector("div").classList.add("mt-20", "ml-20", "w-1/2");
@@ -216,5 +215,3 @@ footerDate()
 
 //   window.addEventListener("scroll", handleScroll);
 // });
-
-

@@ -582,16 +582,8 @@ video {
   position: fixed;
 }
 
-.absolute {
-  position: absolute;
-}
-
 .relative {
   position: relative;
-}
-
-.inset-0 {
-  inset: 0px;
 }
 
 .bottom-20 {
@@ -663,14 +655,6 @@ video {
   margin-top: 1.25rem;
 }
 
-.mt-\[80vh\] {
-  margin-top: 80vh;
-}
-
-.mt-\[90vh\] {
-  margin-top: 90vh;
-}
-
 .block {
   display: block;
 }
@@ -697,18 +681,6 @@ video {
 
 .h-20 {
   height: 5rem;
-}
-
-.h-\[15vh\] {
-  height: 15vh;
-}
-
-.h-\[20vh\] {
-  height: 20vh;
-}
-
-.h-\[50vh\] {
-  height: 50vh;
 }
 
 .h-fit {
@@ -1014,17 +986,13 @@ video {
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
 body {
   background-color: rgb(32, 32, 77);
   font-size: 12px;
-  font-family: 'Tilt Neon', sans-serif;
+  font-family: "Tilt Neon", sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -1036,14 +1004,10 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #00FFFF;
+  background-color: #00ffff;
   border-radius: 20px;
   border: 3px solid black;
 }
-
-/* #about-me-sect {
-  display: none;
-} */
 
 .fadeIn {
   animation: fadeIn 0.3s ease-in-out;
@@ -1106,65 +1070,9 @@ p {
   background-color: aquamarine;
 }
 
-/* .draw {
-  position: relative;
-  overflow: hidden;
-}
-
-.draw::before,
-.draw::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background-color: transparent;
-  transition: width 0.5s ease-out, background-color 0.5s ease-out;
-}
-
-.draw::before {
-  top: 0;
-  left: 0;
-  transform-origin: left;
-}
-
-.draw::after {
-  bottom: 0;
-  right: 0;
-  transform-origin: right;
-}
-
-.draw:hover::before,
-.draw:hover::after {
-  width: 100%;
-  background-color: #00FFFF;
-} */
-
 .navBtn {
   font-size: smaller;
 }
-
-/* .hr-active {
-  width: 100px;
-  height: 4px;
-  color: white;
-  padding-bottom: 3px;
-
-}
-
-.hr-active.active {
-  animation: hrGrow 0.5s ease-in;
-
-}
-
-@keyframes hrGrow {
-  0% {
-    width: 100px;
-  }
-
-  100% {
-    width: 130px;
-  }
-} */
 
 .hr-active {
   width: 100px;
@@ -1177,15 +1085,9 @@ p {
 
 .hr-active.active {
   width: 140px;
-  background-color: #00FFFF;
+  background-color: #00ffff;
   opacity: 1;
 }
-
-/* .hr-active:hover {
-  width: 140px;
-  
-  opacity: 1;
-} */
 
 .hr-nav-container {
   font-size: 16px;
@@ -1197,7 +1099,7 @@ p {
   transition: width 0.5s, background-color 0.5s;
 }
 
-.social-btn{
+.social-btn {
   opacity: 0.6;
   mix-blend-mode: difference;
 }
@@ -1215,16 +1117,6 @@ p {
   height: 30vh;
   max-height: 30vh;
 }
-
-/* this is an example of creating a custom style class for tailwind css
- @layer utilities {
-  .btn-primary {
-     @apply bg-blue-500 text-white py-2 px-4 rounded;
-  }
- }
-
-
- <button class="btn-primary">Click me</button> */
 
 .hover\:bg-transparent:hover {
   background-color: transparent;
