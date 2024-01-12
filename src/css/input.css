@@ -39,7 +39,9 @@ body::-webkit-scrollbar-thumb {
  
 }
 
-
+p {
+  font-weight: normal;
+}
 .fadeOut {
   animation: fadeOut 0.3s ease-in-out;
   opacity: 0;
@@ -82,7 +84,7 @@ body::-webkit-scrollbar-thumb {
 #projects-section > div {
   position: relative;
   margin: 1em;
-  padding: 1em 2em;
+  padding: 0.5em 1em;
   font-size: inherit;
   font-weight: 700;
   /* background: none; */

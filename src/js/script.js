@@ -140,8 +140,17 @@ let sectionEls = document.getElementsByTagName("section"),
     }
   };
   
+function footerDate() {
+  const footerDate = document.getElementById('footer-date');
+ 
+  const date = new Date();
+  const year = date.getFullYear();
+  // const day = date.getDay();
+  footerDate.textContent = `&copy; Adam Smith ${year}`
+}
 
-
+// const date = footerDate();
+// console.log(date)
 // const socialBtns = Array.from(document.getElementsByClassName("social-btn"));
 
 // socialBtns.forEach(element => {

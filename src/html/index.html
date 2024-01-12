@@ -18,7 +18,7 @@
     >
       <div
         id="sidebar"
-        class="fixed top-0 left-10 w-[10vw] h-full flex flex-col justify-between"
+        class=" fixed top-0 left-10 w-[10vw] h-full flex-col justify-between hidden lg:flex"
       >
         <div id="welcome-spacer">
           <section id="introduction" class="text-white h-50 flex relative">
@@ -116,7 +116,7 @@
       >
         <!-- Introduction container -->
         <div class="">
-          <div class="header-container rounded w-1/4 p-2">
+          <div class="header-container rounded w-fit p-2">
             <h1 class="text-4xl font-bold">Welcome</h1>
           </div>
 
@@ -155,8 +155,8 @@
         id="about-me-sect"
         class="text-white h-fit w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card"
       >
-        <div class="">
-          <div class="header-container rounded w-1/4 p-2">
+        <div class="h-fit">
+          <div class="header-container rounded w-fit p-2">
             <h1 class="text-4xl font-bold">About Me</h1>
           </div>
           <span id="experience" class="h-fit w-full grid grid-cols-2 gap-4">
@@ -169,6 +169,30 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Excepturi, doloribus!
                 </p>
+                <span
+                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
+                >Javascript</span
+              >
+                <span
+                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
+                >HTML5</span
+              >
+                <span
+                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
+                >CSS3</span
+              >
+                <span
+                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
+                >JQuery</span
+              >
+                <span
+                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
+                >Bootstrap</span
+              >
+                <span
+                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
+                >WordPress</span
+              >
               </span>
             </div>
             <div class="...">Web Something</div>
@@ -239,39 +263,51 @@
 
       <section
         id="projects"
-        class="text-white h-fit w-3/4 flex relative flex items-center rounded bg-card"
+        class="text-white h-fit w-3/4 flex relative items-center rounded bg-card"
       >
         <div class="mt-5 w-full">
           <div class="header-container rounded w-fit p-2">
-            <h1 class="text-4xl font-bold mb-2">Projects</h1>
+            <h1 class="text-2xl font-bold mb-2">Projects</h1>
           </div>
         </div>
         <div
           id="projects-section"
-          class="grid grid-cols-2 md:grid-cols-2 hidden rounded bg-card"
+          class="grid grid-cols-2 md:grid-cols-2 hidden rounded bg-card h-fit"
         >
           <div
-            class="max-w-sm mx-auto rounded overflow-hidden text-center cardHover"
+            class="max-w-sm rounded overflow-hidden  cardHover"
           >
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">Project 1</div>
-              <p class="text-base">
+          <div class="mb-2">Project 1</div>
+          <img
+      src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"
+      alt="ui/ux review check" class="rounded object-fit mb-2" />
+            <div class="">
+              
+              <p class="text-sm pb-2">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Voluptatibus quia, nulla! Maiores et perferendis eaque,
                 exercitationem praesentium nihil.
               </p>
             </div>
-            <div class="px-6 pt-4 pb-2">
+            <div class="">
               <span
-                class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble"
+                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble "
                 >#project 1</span
               >
               <span
-                class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble"
+                class="inline-block rounded-full px-3 py-1 text-sm  text-bubble-text mr-2 mb-2 bg-bubble"
                 >#project 1</span
               >
               <span
-                class="inline-block rounded-full px-3 py-1 text-sm font-semibold text-bubble-text mr-2 mb-2 bg-bubble"
+                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
+                >#project 1</span
+              >
+              <span
+                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
+                >#project 1</span
+              >
+              <span
+                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
                 >#project 1</span
               >
             </div>
@@ -482,6 +518,7 @@
 
         <!-- npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch -->
       </section>
+      
       <button
           id="scroll-top"
           class="fixed bottom-20 right-10 h-10 w-10 rounded-full bg-bubble"
@@ -493,5 +530,8 @@
           </span>
         </button>
     </div>
+    <footer class="bg-gray-500 w-full h-20 flex justify-center items-center">
+      <p id="footer-date"></p>
+    </footer>
   </body>
 </html>
