@@ -114,40 +114,51 @@ function scrollToSection(sectionId) {
   }
 }
 
-let sectionEls = document.getElementsByTagName("section"),
+let sectionEls = document.querySelectorAll("section"),
   hrLines = document.getElementsByClassName("hr-active"),
   currentlyActiveSection = 0;
 
-  window.onscroll = function () {
-    let newActiveSection = null;
-  
-    for (let i = 0; i < sectionEls.length; i++) {
-      const sectionTop = sectionEls[i].offsetTop;
-      const sectionBottom = sectionTop + sectionEls[i].offsetHeight;
-  
-      if (
-        window.scrollY >= sectionTop &&
-        window.scrollY < sectionBottom
-      ) {
-        newActiveSection = i;
-      }
+window.onscroll = function () {
+  let newActiveSection = null;
+
+  for (let i = 0; i < sectionEls.length; i++) {
+    const sectionTop = sectionEls[i].offsetTop;
+    const sectionBottom = sectionTop + sectionEls[i].offsetHeight;
+
+    if (
+      window.scrollY >= sectionTop &&
+      window.scrollY < sectionBottom
+    ) {
+      newActiveSection = i;
     }
-  
-    if (newActiveSection !== null && newActiveSection !== currentlyActiveSection) {
+  }
+
+  // Exclude the footer from adding/removing the "active" class
+  const isFooter = document.body.scrollHeight - window.innerHeight === window.scrollY;
+  if (!isFooter && newActiveSection !== null && newActiveSection !== currentlyActiveSection) {
+    if (hrLines[currentlyActiveSection]) {
       hrLines[currentlyActiveSection].classList.remove("active");
-      hrLines[newActiveSection].classList.add("active");
-      currentlyActiveSection = newActiveSection;
     }
-  };
-  
+
+    if (hrLines[newActiveSection]) {
+      hrLines[newActiveSection].classList.add("active");
+    }
+
+    currentlyActiveSection = newActiveSection;
+  }
+};
+
 function footerDate() {
   const footerDate = document.getElementById('footer-date');
  
   const date = new Date();
   const year = date.getFullYear();
   // const day = date.getDay();
-  footerDate.textContent = `&copy; Adam Smith ${year}`
+  footerDate.innerText = `© Adam Smith ${year}`
 }
+footerDate()
+
+
 
 // const date = footerDate();
 // console.log(date)

@@ -14,6 +14,8 @@
 
 body {
   background-color: rgb(32, 32, 77);
+  font-size: 12px;
+  font-family: 'Tilt Neon', sans-serif;
 }
 body::-webkit-scrollbar {
   width: 12px;     
@@ -28,7 +30,6 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;      
   border: 3px solid black; 
 }
-
 
 /* #about-me-sect {
   display: none;
@@ -175,9 +176,26 @@ p {
   opacity: 1;
 }
 
+/* .hr-active:hover {
+  width: 140px;
+  
+  opacity: 1;
+} */
+
+
+.hr-nav-container:hover .hr-active {
+  width: 150px;
+  transform-origin: left;
+  transition: width 0.5s, background-color 0.5s;
+}
+
+
 .social-btn{
   opacity: 0.6;
+  mix-blend-mode: difference;
+  color: rgb(255, 4, 4);
 }
+
 .social-btn:hover {
   opacity: 1;
  
@@ -189,12 +207,6 @@ p {
   width: 20vw;
   height: 30vh;
   max-height: 30vh;
-}
-
-.animate-move-into-sidebar {
-  margin-left: 0;
-  font-size: smaller;
-  /* animation: fadeOut 0.5s ease-in-out; */
 }
 
 

@@ -695,6 +695,10 @@ video {
   height: 2.5rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-\[15vh\] {
   height: 15vh;
 }
@@ -714,10 +718,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-20 {
-  height: 5rem;
 }
 
 .w-1\/2 {
@@ -765,8 +765,16 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.place-content-center {
+  place-content: center;
 }
 
 .items-center {
@@ -834,11 +842,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-gray-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -862,16 +865,16 @@ video {
   padding: 0.25rem;
 }
 
-.p-12 {
-  padding: 3rem;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
 
 .p-3 {
   padding: 0.75rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .px-3 {
@@ -1020,6 +1023,8 @@ video {
 
 body {
   background-color: rgb(32, 32, 77);
+  font-size: 12px;
+  font-family: 'Tilt Neon', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -1176,8 +1181,22 @@ p {
   opacity: 1;
 }
 
+/* .hr-active:hover {
+  width: 140px;
+  
+  opacity: 1;
+} */
+
+.hr-nav-container:hover .hr-active {
+  width: 150px;
+  transform-origin: left;
+  transition: width 0.5s, background-color 0.5s;
+}
+
 .social-btn{
   opacity: 0.6;
+  mix-blend-mode: difference;
+  color: rgb(255, 4, 4);
 }
 
 .social-btn:hover {
@@ -1188,12 +1207,6 @@ p {
   width: 20vw;
   height: 30vh;
   max-height: 30vh;
-}
-
-.animate-move-into-sidebar {
-  margin-left: 0;
-  font-size: smaller;
-  /* animation: fadeOut 0.5s ease-in-out; */
 }
 
 /* this is an example of creating a custom style class for tailwind css
@@ -1226,14 +1239,28 @@ p {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+@media (min-width: 640px) {
+  .sm\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 768px) {
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 1024px) {
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
