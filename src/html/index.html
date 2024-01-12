@@ -15,7 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
       rel="stylesheet"
     />
-    <script src="../js/script.js" defer></script>
+    <script type="module" src="../js/config.js"></script>
+    <script type="module" src="../js/script.mjs" defer></script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
   </head>
   <body>
@@ -27,17 +28,23 @@
         id="sidebar"
         class="fixed top-0 left-10 w-[10vw] h-full flex-col justify-between hidden lg:flex"
       >
-        <div id="welcome-spacer">
+        <div id="welcome-spacer" class="w-fit">
           <section id="introduction" class="text-white h-50 flex relative">
             <!-- Introduction container -->
             <div class="mt-10">
-              <h1 class="text-4xl font-bold">Hi</h1>
+              <h1 class="text-4xl font-bold">Hi, I'm Adam.</h1>
               <p class="italic">Web Developer</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-                quidem, eligendi quisquam error vel repudiandae rem odio ipsum
-                modi harum.
-              </p>
+              <span id="intro-container" class="inline">
+                <p>Junior developer with experience in Javascript, React,HTML5 and CSS3.</p>
+                <br>
+                <span id="weather-desc"></span>
+                
+
+                
+               
+                
+
+              </span>
             </div>
           </section>
         </div>
@@ -150,8 +157,8 @@
             <h1 class="text-4xl font-bold">About Me</h1>
           </div>
           <span id="experience" class="h-fit w-full grid grid-cols-2 gap-4">
-            <div class="col-span-2">Experience</div>
-            <div class="...">Novemer 1 - 31 December</div>
+            <div class="col-span-2 text-xl">Experience</div>
+            <div class="..."><em>Novemer 1 - 31 December</em></div>
             <div class="...">
               <span>
                 <h4>Web Dev</h4>
@@ -185,7 +192,7 @@
                 >
               </span>
             </div>
-            <div class="...">Web Something</div>
+            <div class="..."><em>Web Something</em></div>
             <div class="...">
               <span>
                 <h4>Asset Management Council</h4>
@@ -198,8 +205,8 @@
             </div>
           </span>
           <span id="education" class="h-fit w-full grid grid-cols-2 gap-4">
-            <div class="col-span-2"><h3>Education</h3></div>
-            <div class="...">Holmesglen</div>
+            <div class="col-span-2 text-xl"><h3>Education</h3></div>
+            <div class="..."><em>Holmesglen</em></div>
             <div class="...">
               <span>
                 <h4>Asset Management Council</h4>
@@ -210,7 +217,7 @@
                 </p>
               </span>
             </div>
-            <div class="...">General Assembly</div>
+            <div class="..."><em>General Assembly</em></div>
             <div class="...">
               <span>
                 <h4>Asset Management Council</h4>
@@ -241,7 +248,7 @@
       >
         <div class="mt-5 w-full">
           <div class="header-container rounded w-fit p-2">
-            <h1 class="text-2xl font-bold mb-2">Projects</h1>
+            <h1 class="text-4xl font-bold mb-2">Projects</h1>
           </div>
         </div>
         <div

@@ -1,3 +1,40 @@
+
+import config from './config.js';
+
+
+async function getWeatherData() {
+  const url = `${config.apiUrl}${config.apiKey}`;
+  const weatherDescContainer = document.getElementById('weather-desc');
+  
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error('Error retrieving weather results');
+    }
+
+    const data = await response.json();
+    console.log(data);
+    const temp = (data.main.temp / 10).toFixed(0);
+    const weatherDesc = data.weather[0].description;
+    const weatherIcon = data.weather[0].icon;
+    
+    const weatherIconImg = document.createElement('img');
+    weatherIconImg.setAttribute("width", "15px")
+    weatherIconImg.style.display = 'inline';
+    weatherIconImg.src = `http://openweathermap.org/img/w/${weatherIcon}.png`;
+    
+
+    const weatherSentence = `Currently based in ${weatherDesc}y Melbourne, where it's currently ${temp}°` 
+    weatherDescContainer.textContent = weatherSentence;
+    weatherDescContainer.appendChild(weatherIconImg)
+
+  } catch (error) {
+    console.error('Error fetching weather data:', error);
+  }
+}
+
+getWeatherData()
 document.addEventListener("DOMContentLoaded", function () {
   // const svgContainer = document.getElementById("svgContainer");
   // const svgLine = document.getElementById("scrollLine");
