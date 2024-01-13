@@ -15,7 +15,7 @@ async function getWeatherData() {
 
     const data = await response.json();
     console.log(data);
-    const temp = (data.main.temp / 10).toFixed(0);
+    const temp = data.main.temp.toFixed(0);
     const weatherDesc = data.weather[0].description;
     const weatherIcon = data.weather[0].icon;
     
@@ -25,7 +25,7 @@ async function getWeatherData() {
     weatherIconImg.src = `http://openweathermap.org/img/w/${weatherIcon}.png`;
     
 
-    const weatherSentence = `Currently based in ${weatherDesc}y Melbourne, where it's currently ${temp}°` 
+    const weatherSentence = `Currently based in Melbourne, where it's currently ${temp}° and ${weatherDesc}` 
     weatherDescContainer.textContent = weatherSentence;
     weatherDescContainer.appendChild(weatherIconImg)
 
@@ -140,8 +140,10 @@ function scrollToTop() {
 
 document.getElementById("scroll-top").addEventListener("click", scrollToTop);
 
-function scrollToSection(sectionId) {
+export function scrollToSection(sectionId) {
+  console.log(sectionId);
   const section = document.getElementById(sectionId);
+  console.log(section);
   if (section) {
     const offset =
       section.getBoundingClientRect().top +
@@ -149,7 +151,32 @@ function scrollToSection(sectionId) {
       0.11 * window.innerHeight;
     window.scrollTo({ top: offset, behavior: "smooth" });
   }
+  
 }
+
+
+const aboutBtn = document.getElementById("about-btn");
+const welcomeBtn = document.getElementById("welcome-btn");
+const projectsBtn = document.getElementById("projects-btn");
+const contactBtn = document.getElementById("contact-btn");
+
+welcomeBtn.addEventListener("click", () => {
+  scrollToTop()
+})
+aboutBtn && aboutBtn.addEventListener("click", function() {
+  scrollToSection('about-me-sect');
+  console.log('hello')
+});
+
+projectsBtn.addEventListener("click", () => {
+  scrollToSection('projects')
+})
+
+contactBtn.addEventListener("click", () => {
+  scrollToSection('contact')
+})
+
+
 
 let sectionEls = document.querySelectorAll("section"),
   hrLines = document.getElementsByClassName("hr-active"),

@@ -15,9 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
       rel="stylesheet"
     />
+    
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script type="module" src="../js/config.js"></script>
     <script type="module" src="../js/script.mjs" defer></script>
-    <script src="https://web3forms.com/client/script.js" async defer></script>
   </head>
   <body>
     <div
@@ -52,6 +53,7 @@
           <div class="flex items-center hr-nav-container">
             <hr class="hr-active" />
             <button
+              id="welcome-btn"
               class="text-white text-s mb-3 ml-3 navBtn"
               onclick="scrollToTop()"
             >
@@ -62,7 +64,7 @@
             <hr class="hr-active" />
             <button
               class="text-white text-s mb-3 ml-3 navBtn"
-              onclick="scrollToSection('about-me-sect')"
+             id="about-btn" 
             >
               About
             </button>
@@ -72,7 +74,7 @@
             <hr class="hr-active" />
             <button
               class="text-white text-s mb-3 ml-3 navBtn"
-              onclick="scrollToSection('projects')"
+              id="projects-btn"
             >
               Projects
             </button>
@@ -81,7 +83,7 @@
             <hr class="hr-active" />
             <button
               class="text-white text-s ml-3 navBtn"
-              onclick="scrollToSection('contact')"
+              id="contact-btn"
             >
               Contact
             </button>
@@ -127,11 +129,11 @@
       <!-- Hero Section -->
       <section
         id="welcome-sect"
-        class="text-white h-50 w-3/4 mt-20 mb-10 p-3 flex justify-between items-center relative rounded bg-card"
+        class="text-white h-50 w-3/4 mt-20 mb-10 p-3 flex justify-between items-center relative rounded bg-card shadow-2xl"
       >
         <!-- Introduction container -->
         <div class="">
-          <div class="header-container rounded w-fit p-2">
+          <div class="header-container rounded w-fit p-2 shadow-xl">
             <h1 class="text-4xl font-bold">Welcome</h1>
           </div>
 
@@ -150,10 +152,10 @@
 
       <section
         id="about-me-sect"
-        class="text-white h-fit w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card"
+        class="text-white h-fit w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card shadow-2xl"
       >
         <div class="h-fit">
-          <div class="header-container rounded w-fit p-2">
+          <div class="header-container rounded w-fit p-2 shadow-xl">
             <h1 class="text-4xl font-bold">About Me</h1>
           </div>
           <span id="experience" class="h-fit w-full grid grid-cols-2 gap-4">
@@ -244,10 +246,10 @@
 
       <section
         id="projects"
-        class="text-white h-fit w-3/4 flex relative rounded bg-card"
+        class="text-white h-fit w-3/4 flex relative rounded bg-card shadow-2xl"
       >
         <div class="mt-5 w-full">
-          <div class="header-container rounded w-fit p-2">
+          <div class="header-container rounded w-fit p-2 shadow-xl">
             <h1 class="text-4xl font-bold mb-2">Projects</h1>
           </div>
         </div>
@@ -375,12 +377,12 @@
 
       <section
         id="contact"
-        class="text-white h-fit w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card mb-50"
+        class="text-white h-fit w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card mb-50 shadow-2xl"
       >
         <div>
           <div class="w-full">
-            <div class="header-container rounded w-fit p-3">
-              <h1 class="text-4xl font-bold">Contact</h1>
+            <div class="header-container rounded w-fit p-3 shadow-xl">
+              <h1 class="text-4xl font-bold ">Contact</h1>
             </div>
 
             <!-- component -->
