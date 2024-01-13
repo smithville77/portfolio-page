@@ -1,16 +1,14 @@
-
-import config from './config.js';
-
+import config from "./config.js";
 
 async function getWeatherData() {
   const url = `${config.apiUrl}${config.apiKey}`;
-  const weatherDescContainer = document.getElementById('weather-desc');
-  
+  const weatherDescContainer = document.getElementById("weather-desc");
+
   try {
     const response = await fetch(url);
 
     if (!response.ok) {
-      throw new Error('Error retrieving weather results');
+      throw new Error("Error retrieving weather results");
     }
 
     const data = await response.json();
@@ -18,23 +16,21 @@ async function getWeatherData() {
     const temp = data.main.temp.toFixed(0);
     const weatherDesc = data.weather[0].description;
     const weatherIcon = data.weather[0].icon;
-    
-    const weatherIconImg = document.createElement('img');
-    weatherIconImg.setAttribute("width", "15px")
-    weatherIconImg.style.display = 'inline';
+
+    const weatherIconImg = document.createElement("img");
+    weatherIconImg.setAttribute("width", "15px");
+    weatherIconImg.style.display = "inline";
     weatherIconImg.src = `http://openweathermap.org/img/w/${weatherIcon}.png`;
-    
 
-    const weatherSentence = `Currently based in Melbourne, where it's currently ${temp}° and ${weatherDesc}` 
+    const weatherSentence = `Currently based in Melbourne, where it's currently ${temp}° and ${weatherDesc}`;
     weatherDescContainer.textContent = weatherSentence;
-    weatherDescContainer.appendChild(weatherIconImg)
-
+    weatherDescContainer.appendChild(weatherIconImg);
   } catch (error) {
-    console.error('Error fetching weather data:', error);
+    console.error("Error fetching weather data:", error);
   }
 }
 
-getWeatherData()
+getWeatherData();
 document.addEventListener("DOMContentLoaded", function () {
   // const svgContainer = document.getElementById("svgContainer");
   // const svgLine = document.getElementById("scrollLine");
@@ -151,9 +147,7 @@ export function scrollToSection(sectionId) {
       0.11 * window.innerHeight;
     window.scrollTo({ top: offset, behavior: "smooth" });
   }
-  
 }
-
 
 const aboutBtn = document.getElementById("about-btn");
 const welcomeBtn = document.getElementById("welcome-btn");
@@ -161,22 +155,21 @@ const projectsBtn = document.getElementById("projects-btn");
 const contactBtn = document.getElementById("contact-btn");
 
 welcomeBtn.addEventListener("click", () => {
-  scrollToTop()
-})
-aboutBtn && aboutBtn.addEventListener("click", function() {
-  scrollToSection('about-me-sect');
-  console.log('hello')
+  scrollToTop();
 });
+aboutBtn &&
+  aboutBtn.addEventListener("click", function () {
+    scrollToSection("about-me-sect");
+    console.log("hello");
+  });
 
 projectsBtn.addEventListener("click", () => {
-  scrollToSection('projects')
-})
+  scrollToSection("projects");
+});
 
 contactBtn.addEventListener("click", () => {
-  scrollToSection('contact')
-})
-
-
+  scrollToSection("contact");
+});
 
 let sectionEls = document.querySelectorAll("section"),
   hrLines = document.getElementsByClassName("hr-active"),
