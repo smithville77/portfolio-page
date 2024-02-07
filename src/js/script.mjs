@@ -126,6 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     } else {
       // svgLine3.setAttribute("y2", "0%");
+      
     }
   });
 });
