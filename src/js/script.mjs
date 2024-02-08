@@ -22,7 +22,7 @@ async function getWeatherData() {
     weatherIconImg.style.display = "inline";
     weatherIconImg.src = `http://openweathermap.org/img/w/${weatherIcon}.png`;
 
-    const weatherSentence = `Currently based in Melbourne, where it's currently ${temp}° and ${weatherDesc}`;
+    const weatherSentence = `Based in Melbourne, where it's currently ${temp}° and ${weatherDesc}`;
     weatherDescContainer.textContent = weatherSentence;
     weatherDescContainer.appendChild(weatherIconImg);
   } catch (error) {
