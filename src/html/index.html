@@ -23,7 +23,7 @@
   <body>
     <div
       id="main-sect"
-      class="mx-auto h-fit max-w-screen-lg relative flex flex-col justify-center items-center"
+      class="mx-auto min-h-screen max-w-screen-lg relative flex flex-col justify-center items-center"
     >
       <div
         id="sidebar"
@@ -151,7 +151,8 @@
 
       <section
         id="about-me-sect"
-        class="text-white h-fit w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card shadow-2xl"
+        style="visibility: hidden;"
+        class="text-white h-fit w-3/4 mt-10 mb-10 p-3 justify-between items-center relative rounded bg-card shadow-2xl hide"
       >
         <div class="h-fit">
           <div class="header-container rounded w-fit p-2 shadow-xl">
@@ -242,9 +243,9 @@
           </button>
         </span>
       </section>
-
       <section
         id="projects"
+        style="visibility: hidden;"
         class="text-white h-fit w-3/4 flex relative rounded bg-card shadow-2xl"
       >
         <div class="mt-5 w-full">
@@ -254,7 +255,7 @@
         </div>
         <div
           id="projects-section"
-          class="grid grid-cols-1 md:grid-cols-2 hidden rounded bg-card h-fit items-center place-content-center"
+          class="grid grid-cols-1 md:grid-cols-2 rounded bg-card h-fit items-center place-content-center"
         >
           <div class="rounded overflow-hidden cardHover align-center">
             <div class="mb-2">Project 1</div>
@@ -376,6 +377,7 @@
 
       <section
         id="contact"
+        style="visibility: hidden;"
         class="text-white h-fit w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card mb-50 shadow-2xl"
       >
         <div>

@@ -10,6 +10,7 @@ body {
   background-color: rgb(32, 32, 77);
   font-size: 12px;
   font-family: "Tilt Neon", sans-serif;
+  overflow-y:scroll;
 }
 body::-webkit-scrollbar {
   width: 12px;
@@ -28,6 +29,8 @@ body::-webkit-scrollbar-thumb {
 .fadeIn {
   animation: fadeIn 0.3s ease-in-out;
 }
+
+
 
 p {
   font-weight: normal;

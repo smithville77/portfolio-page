@@ -62,13 +62,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (draw >= 90 && !aboutMeSectionVisible) {
       aboutMeSectionVisible = true;
       aboutMeSect.style.display = "block";
+      aboutMeSect.style.visibility = "visible"
+      
       if (aboutMeSect.classList.contains("fadeOut")) {
         aboutMeSect.classList.remove("fadeOut");
       }
       aboutMeSect.classList.add("fadeIn");
     } else if (draw < 90 && aboutMeSectionVisible) {
       aboutMeSectionVisible = false;
-      aboutMeSect.style.display = "hidden";
       aboutMeSect.classList.remove("fadeIn");
       aboutMeSect.classList.add("fadeOut");
       aboutMeSect.style.display = "hidden";
@@ -85,8 +86,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (draw2 >= 100 && !projectSectionVisible) {
         projectSectionVisible = true;
-        document.getElementById("projects-section").classList.remove("hidden");
+        // document.getElementById("projects-section").classList.remove("hidden");
         projectSect.style.display = "block";
+        projectSect.style.visibility = "visible"
         if (projectSect.classList.contains("fadeOut")) {
           projectSect.classList.remove("fadeOut");
         }
@@ -96,12 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
         projectSect.style.display = "hidden";
         projectSect.classList.remove("fadeIn");
         projectSect.classList.add("fadeOut");
-        projectSect.style.display = "hidden";
       }
-    } else {
-      // If the user hasn't scrolled past the "About Me" section, reset the second line
-      // svgLine2.setAttribute("y2", "0%");
-    }
+    } 
 
     if (projectSectionVisible && window.scrollY >= projectSectTop) {
       const scrollPerc3 =
@@ -114,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (draw3 >= 90 && !contactSectionVisible) {
         contactSectionVisible = true;
         contactSect.style.display = "block";
+        contactSect.style.visibility = "visible"
         if (contactSect.classList.contains("fadeOut")) {
           contactSect.classList.remove("fadeOut");
         }
@@ -124,10 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contactSect.classList.remove("fadeIn");
         contactSect.classList.add("fadeOut");
       }
-    } else {
-      // svgLine3.setAttribute("y2", "0%");
-      
-    }
+    } 
   });
 });
 
