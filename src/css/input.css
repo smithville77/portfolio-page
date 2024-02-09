@@ -30,9 +30,7 @@ body::-webkit-scrollbar-thumb {
   animation: fadeIn 0.3s ease-in-out;
 }
 
-#scroll-top {
-  background-color: aquamarine;
-}
+
 
 p {
   font-weight: normal;
