@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundColor: {
         bubble: "rgb(17, 63, 55)",
+        new: "rgb(20, 184, 166)",
         card: "rgb(50, 50, 121)",
       },
       textColor: {
