@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (draw >= 90 && !aboutMeSectionVisible) {
       aboutMeSectionVisible = true;
       aboutMeSect.style.display = "block";
-      aboutMeSect.style.visibility = "visible"
-      
+      aboutMeSect.style.visibility = "visible";
+
       if (aboutMeSect.classList.contains("fadeOut")) {
         aboutMeSect.classList.remove("fadeOut");
       }
@@ -82,13 +82,11 @@ document.addEventListener("DOMContentLoaded", function () {
         (document.documentElement.scrollHeight - aboutMeSectTop);
       const draw2 = 700 * scrollPerc2;
 
-      // svgLine2.setAttribute("y2", draw2 + "%");
-
       if (draw2 >= 100 && !projectSectionVisible) {
         projectSectionVisible = true;
-        // document.getElementById("projects-section").classList.remove("hidden");
+
         projectSect.style.display = "block";
-        projectSect.style.visibility = "visible"
+        projectSect.style.visibility = "visible";
         if (projectSect.classList.contains("fadeOut")) {
           projectSect.classList.remove("fadeOut");
         }
@@ -99,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
         projectSect.classList.remove("fadeIn");
         projectSect.classList.add("fadeOut");
       }
-    } 
+    }
 
     if (projectSectionVisible && window.scrollY >= projectSectTop) {
       const scrollPerc3 =
@@ -107,12 +105,10 @@ document.addEventListener("DOMContentLoaded", function () {
         (document.documentElement.scrollHeight - projectSectTop);
       const draw3 = 700 * scrollPerc3;
 
-      // svgLine3.setAttribute("y2", draw3 + "%");
-
       if (draw3 >= 90 && !contactSectionVisible) {
         contactSectionVisible = true;
         contactSect.style.display = "block";
-        contactSect.style.visibility = "visible"
+        contactSect.style.visibility = "visible";
         if (contactSect.classList.contains("fadeOut")) {
           contactSect.classList.remove("fadeOut");
         }
@@ -123,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contactSect.classList.remove("fadeIn");
         contactSect.classList.add("fadeOut");
       }
-    } 
+    }
   });
 });
 
