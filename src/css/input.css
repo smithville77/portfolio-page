@@ -26,14 +26,6 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid black;
 }
 
-.dark {
-    /* Dark mode styles */
-    background-color: #ffffff;
-    color: #000000;
-}
-
-
-
 
 .fadeIn {
   animation: fadeIn 0.3s ease-in-out;
