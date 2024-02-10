@@ -170,12 +170,16 @@ let sectionEls = document.querySelectorAll("section"),
 
 window.onscroll = function () {
   let newActiveSection = null;
+  const sectionEls = document.querySelectorAll("section");
+  // the 0.25 here is so that the active class is applied to the correct section a bit earlier
+  // when scrolling
+  const scrollPosition = window.scrollY + 0.25 * window.innerHeight; 
 
   for (let i = 0; i < sectionEls.length; i++) {
     const sectionTop = sectionEls[i].offsetTop;
     const sectionBottom = sectionTop + sectionEls[i].offsetHeight;
 
-    if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
       newActiveSection = i;
     }
   }
