@@ -214,11 +214,7 @@ function footerDate() {
 }
 footerDate();
 
-// document
-//   .getElementById("toggleDarkMode")
-//   .addEventListener("click", function () {
-//     document.documentElement.classList.toggle("dark");
-//   });
+
 
 const lightIcon = document.getElementById("light-icon");
 const darkIcon = document.getElementById("dark-icon");
