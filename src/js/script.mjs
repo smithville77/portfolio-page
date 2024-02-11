@@ -173,7 +173,7 @@ window.onscroll = function () {
   const sectionEls = document.querySelectorAll("section");
   // the 0.25 here is so that the active class is applied to the correct section a bit earlier
   // when scrolling
-  const scrollPosition = window.scrollY + 0.25 * window.innerHeight; 
+  const scrollPosition = window.scrollY + 0.25 * window.innerHeight;
 
   for (let i = 0; i < sectionEls.length; i++) {
     const sectionTop = sectionEls[i].offsetTop;
@@ -214,10 +214,23 @@ function footerDate() {
 }
 footerDate();
 
-document.getElementById('toggleDarkMode').addEventListener('click', function() {
-    document.documentElement.classList.toggle('dark');
-});
+// document
+//   .getElementById("toggleDarkMode")
+//   .addEventListener("click", function () {
+//     document.documentElement.classList.toggle("dark");
+//   });
 
+const lightIcon = document.getElementById("light-icon");
+const darkIcon = document.getElementById("dark-icon");
+
+const themeToggle = document.getElementById("btn-toggle-container");
+
+themeToggle.addEventListener("click", () => {
+  lightIcon.classList.toggle("hidden");
+  darkIcon.classList.toggle("hidden");
+
+  document.documentElement.classList.toggle("dark");
+});
 
 // const date = footerDate();
 // console.log(date)

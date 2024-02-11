@@ -30,16 +30,28 @@
         class="fixed top-0 left-10 w-[15vw] h-full flex-col justify-between hidden lg:flex"
       >
         <div id="welcome-spacer" class="w-fit">
-          <div id="introduction" class="text-black dark:text-white h-50 flex relative">
+          <div
+            id="introduction"
+            class="text-black dark:text-white h-50 flex relative"
+          >
             <!-- Introduction container -->
             <div class="mt-10">
+              <!-- <button id="toggleDarkMode">Toggle Dark Mode</button> -->
+
+              <button id="btn-toggle-container" class="flex w-100">
+                <div id="light-icon" class="hidden">
+                  <span class="material-symbols-outlined"> wb_sunny </span>
+                </div>
+                <div id="dark-icon">
+                  <span class="material-symbols-outlined"> dark_mode </span>
+                </div>
+              </button>
               <h1 class="text-4xl font-bold">Hi, I'm Adam.</h1>
-              
+
               <span id="intro-container" class="inline">
                 <p>
-                  Welcome to my personal page!
-                  I'm a junior developer with experience in Javascript, React, HTML5
-                  and CSS3.
+                  Welcome to my personal page! I'm a junior developer with
+                  experience in Javascript, React, HTML5 and CSS3.
                 </p>
                 <br />
                 <p>
@@ -66,7 +78,10 @@
           </div>
           <div class="flex items-center hr-nav-container">
             <hr class="hr-active" />
-            <button class="text-black dark:text-white text-s mb-3 ml-3 navBtn" id="about-btn">
+            <button
+              class="text-black dark:text-white text-s mb-3 ml-3 navBtn"
+              id="about-btn"
+            >
               About
             </button>
           </div>
@@ -82,14 +97,20 @@
           </div>
           <div class="flex items-center hr-nav-container">
             <hr class="hr-active" />
-            <button class="text-black dark:text-white text-s ml-3 navBtn" id="contact-btn">
+            <button
+              class="text-black dark:text-white text-s ml-3 navBtn"
+              id="contact-btn"
+            >
               Contact
             </button>
           </div>
         </span>
 
         <div id="social-btns" class="flex mb-3">
-          <button id="toggleDarkMode">Toggle Dark Mode</button>
+          <!-- <div id="light-dark-toggle" class="">
+          <div id="light-btn" class="w-50 bg-white"></div>
+          <div id="dark-btn" class="w-50"></div>
+        </div> -->
 
           <a href="https://github.com/smithville77" class="group inline-block">
             <span class="social-btn">
@@ -131,11 +152,13 @@
       <!-- Hero Section -->
       <section
         id="welcome-sect"
-        class="text-white h-50 w-3/4 mt-20  p-3 flex justify-between items-center relative rounded bg-card dark:bg-[#323279] shadow-2xl"
+        class="text-white h-50 w-3/4 mt-20 p-3 flex justify-between items-center relative rounded bg-card dark:bg-[#323279] shadow-2xl"
       >
         <!-- Introduction container -->
         <div class="text-black dark:text-white">
-          <div class="header-container text-white  bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-2 shadow-xl">
+          <div
+            class="header-container text-white bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-2 shadow-xl"
+          >
             <h1 class="text-4xl font-bold">Welcome</h1>
           </div>
 
@@ -154,16 +177,18 @@
 
       <section
         id="about-me-sect"
-        style="visibility: hidden;"
-        class="text-black dark:text-white h-fit w-3/4 p-3 mt-10   justify-between items-center relative rounded bg-card dark:bg-[#323279] shadow-2xl hide"
+        style="visibility: hidden"
+        class="text-black dark:text-white h-fit w-3/4 p-3 mt-10 justify-between items-center relative rounded bg-card dark:bg-[#323279] shadow-2xl hide"
       >
         <div class="h-fit">
-          <div class="header-container text-white bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-2 shadow-xl">
+          <div
+            class="header-container text-white bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-2 shadow-xl"
+          >
             <h1 class="text-4xl font-bold">About Me</h1>
           </div>
           <span id="experience" class="h-fit w-full grid grid-cols-2 gap-4">
             <div class="col-span-2 text-xl">Experience</div>
-      
+
             <div class="..."><em>Asset Management Council</em></div>
             <div class="...">
               <span>
@@ -174,30 +199,29 @@
                   Excepturi, doloribus!
                 </p>
                 <span
-                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
-                >Javascript</span
-              >
-              <span
-                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
-                >HTML5</span
-              >
-              <span
-                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
-                >CSS3</span
-              >
-              <span
-                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
-                >JQuery</span
-              >
-              <span
-                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
-                >Bootstrap</span
-              >
-              <span
-                class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
-                >WordPress</span
-              >
-            </span>
+                  class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
+                  >Javascript</span
+                >
+                <span
+                  class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
+                  >HTML5</span
+                >
+                <span
+                  class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
+                  >CSS3</span
+                >
+                <span
+                  class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
+                  >JQuery</span
+                >
+                <span
+                  class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
+                  >Bootstrap</span
+                >
+                <span
+                  class="inline-block rounded-full px-3 py-1 text-sm text-bubble-text mr-2 mb-2 bg-bubble"
+                  >WordPress</span
+                >
               </span>
             </div>
           </span>
@@ -228,7 +252,9 @@
             <div class="..."><em>Holmesglen</em></div>
             <div class="...">
               <span>
-                <h4>Diploma of Information Technology(Backend Web Development)</h4>
+                <h4>
+                  Diploma of Information Technology(Backend Web Development)
+                </h4>
                 <em>January 2024 - November 2024</em>
                 <!-- <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -262,11 +288,13 @@
       </section>
       <section
         id="projects"
-        style="visibility: hidden;"
-        class="text-black dark:text-white h-fit w-3/4 flex relative mt-10  rounded bg-card dark:bg-[#323279] shadow-2xl"
+        style="visibility: hidden"
+        class="text-black dark:text-white h-fit w-3/4 flex relative mt-10 rounded bg-card dark:bg-[#323279] shadow-2xl"
       >
         <div class="mt-5 w-full">
-          <div class="header-container text-white bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-2 shadow-xl">
+          <div
+            class="header-container text-white bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-2 shadow-xl"
+          >
             <h1 class="text-4xl font-bold mb-2">Projects</h1>
           </div>
         </div>
@@ -394,12 +422,14 @@
 
       <section
         id="contact"
-        style="visibility: hidden;"
-        class="text-black dark:text-white h-fit w-3/4  mt-10 mb-10  p-3 flex justify-between items-center relative rounded bg-card dark:bg-[#323279] mb-50 shadow-2xl"
+        style="visibility: hidden"
+        class="text-black dark:text-white h-fit w-3/4 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card dark:bg-[#323279] mb-50 shadow-2xl"
       >
         <div>
           <div class="w-full">
-            <div class="header-container text-white bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-3 shadow-xl">
+            <div
+              class="header-container text-white bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-3 shadow-xl"
+            >
               <h1 class="text-4xl font-bold">Contact</h1>
             </div>
 
