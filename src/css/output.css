@@ -717,6 +717,10 @@ video {
   width: 100%;
 }
 
+.w-\[15vw\] {
+  width: 15vw;
+}
+
 .max-w-\[550px\] {
   max-width: 550px;
 }
@@ -1122,10 +1126,6 @@ p {
   font-size: smaller;
 }
 
-#hello {
-  background-color: rgb(68, 138, 252)
-}
-
 .hr-active {
   width: 100px;
   height: 4px;
@@ -1137,7 +1137,7 @@ p {
 
 .hr-active.active {
   width: 140px;
-  background-color: #510176;
+  background-color: #0ce1f9;
   opacity: 1;
 }
 

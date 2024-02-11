@@ -129,9 +129,6 @@ p {
 .navBtn {
   font-size: smaller;
 }
-#hello {
-  background-color: rgb(68, 138, 252)
-}
 
 
 .hr-active {
@@ -145,7 +142,7 @@ p {
 
 .hr-active.active {
   width: 140px;
-  background-color: #510176;
+  background-color: #0ce1f9;
   opacity: 1;
 }
 

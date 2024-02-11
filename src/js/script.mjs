@@ -18,11 +18,11 @@ async function getWeatherData() {
     const weatherIcon = data.weather[0].icon;
 
     const weatherIconImg = document.createElement("img");
-    weatherIconImg.setAttribute("width", "15px");
+    weatherIconImg.setAttribute("width", "25px");
     weatherIconImg.style.display = "inline";
     weatherIconImg.src = `http://openweathermap.org/img/w/${weatherIcon}.png`;
 
-    const weatherSentence = `Based in Melbourne, where it's currently ${temp}° and ${weatherDesc}`;
+    const weatherSentence = `Based in Melbourne, where it's currently ${temp}° with ${weatherDesc}`;
     weatherDescContainer.textContent = weatherSentence;
     weatherDescContainer.appendChild(weatherIconImg);
   } catch (error) {
