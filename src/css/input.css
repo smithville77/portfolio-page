@@ -2,12 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+/* dark mode colors
+body:
+background color:   background-color: rgb(32, 32, 77);
+
+header-container:
+background-color: aquamarine;
+
+
+activ-sidebar class"
+background-color: aquamarine;
+*/
+
+.dark body {
+  /* Dark mode styles */
+  background-color: rgb(32, 32, 77);
+  color: #fff;
+}
+.dark #main-sect {
+  /* Dark mode styles */
+  background-color: rgb(32, 32, 77);
+  color: #fff;
+}
+
+.dark .bg-black {
+  background-color: #111;
+}
+
+.dark .text-white {
+  color: #fff;
+}
+
+.dark section {
+  background-color: #323279;
+}
+
+.dark .hr-active.active {
+  background-color: aquamarine;
+}
+
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
 body {
-  background-color: rgb(32, 32, 77);
+  /* background-color: rgb(32, 32, 77); */
   font-size: 12px;
   font-family: "Tilt Neon", sans-serif;
   overflow-y: scroll;
@@ -84,12 +123,16 @@ p {
 
 .header-container {
   transform: translate(-20%, -50%);
-  background-color: aquamarine;
+  /* background-color: #7fffd4; */
 }
 
 .navBtn {
   font-size: smaller;
 }
+#hello {
+  background-color: rgb(68, 138, 252)
+}
+
 
 .hr-active {
   width: 100px;
@@ -102,7 +145,7 @@ p {
 
 .hr-active.active {
   width: 140px;
-  background-color: #00ffff;
+  background-color: #510176;
   opacity: 1;
 }
 

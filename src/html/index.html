@@ -20,7 +20,7 @@
     <script type="module" src="../js/config.js"></script>
     <script type="module" src="../js/script.mjs" defer></script>
   </head>
-  <body>
+  <body class="bg-white dark:bg-[rgb(32, 32, 77)] text-black dark:text-white">
     <div
       id="main-sect"
       class="mx-auto min-h-screen max-w-screen-lg relative flex flex-col justify-center items-center dark:bg-white"
@@ -30,7 +30,7 @@
         class="fixed top-0 left-10 w-[10vw] h-full flex-col justify-between hidden lg:flex"
       >
         <div id="welcome-spacer" class="w-fit">
-          <div id="introduction" class="text-white h-50 flex relative">
+          <div id="introduction" class="text-black dark:text-white h-50 flex relative">
             <!-- Introduction container -->
             <div class="mt-10">
               <h1 class="text-4xl font-bold">Hi, I'm Adam.</h1>
@@ -57,7 +57,7 @@
             <hr class="hr-active" />
             <button
               id="welcome-btn"
-              class="text-white text-s mb-3 ml-3 navBtn"
+              class="text-black dark:text-white text-s mb-3 ml-3 navBtn"
               onclick="scrollToTop()"
             >
               Welcome
@@ -65,7 +65,7 @@
           </div>
           <div class="flex items-center hr-nav-container">
             <hr class="hr-active" />
-            <button class="text-white text-s mb-3 ml-3 navBtn" id="about-btn">
+            <button class="text-black dark:text-white text-s mb-3 ml-3 navBtn" id="about-btn">
               About
             </button>
           </div>
@@ -73,7 +73,7 @@
           <div class="flex items-center hr-nav-container">
             <hr class="hr-active" />
             <button
-              class="text-white text-s mb-3 ml-3 navBtn"
+              class="text-black dark:text-white text-s mb-3 ml-3 navBtn"
               id="projects-btn"
             >
               Projects
@@ -81,13 +81,15 @@
           </div>
           <div class="flex items-center hr-nav-container">
             <hr class="hr-active" />
-            <button class="text-white text-s ml-3 navBtn" id="contact-btn">
+            <button class="text-black dark:text-white text-s ml-3 navBtn" id="contact-btn">
               Contact
             </button>
           </div>
         </span>
 
         <div id="social-btns" class="flex mb-3">
+          <button id="toggleDarkMode">Toggle Dark Mode</button>
+
           <a href="https://github.com/smithville77" class="group inline-block">
             <span class="social-btn">
               <svg
@@ -128,11 +130,11 @@
       <!-- Hero Section -->
       <section
         id="welcome-sect"
-        class="text-white h-50 w-3/4 mt-20  p-3 flex justify-between items-center relative rounded bg-card shadow-2xl"
+        class="text-white h-50 w-3/4 mt-20  p-3 flex justify-between items-center relative rounded bg-card dark:bg-[#323279] shadow-2xl"
       >
         <!-- Introduction container -->
-        <div class="">
-          <div class="header-container rounded w-fit p-2 shadow-xl">
+        <div class="text-black dark:text-white">
+          <div class="header-container text-white  bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-2 shadow-xl">
             <h1 class="text-4xl font-bold">Welcome</h1>
           </div>
 
@@ -152,10 +154,10 @@
       <section
         id="about-me-sect"
         style="visibility: hidden;"
-        class="text-white h-fit w-3/4 p-3 mt-10   justify-between items-center relative rounded bg-card shadow-2xl hide"
+        class="text-black dark:text-white h-fit w-3/4 p-3 mt-10   justify-between items-center relative rounded bg-card dark:bg-[#323279] shadow-2xl hide"
       >
         <div class="h-fit">
-          <div class="header-container rounded w-fit p-2 shadow-xl">
+          <div class="header-container text-white bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-2 shadow-xl">
             <h1 class="text-4xl font-bold">About Me</h1>
           </div>
           <span id="experience" class="h-fit w-full grid grid-cols-2 gap-4">
@@ -260,16 +262,16 @@
       <section
         id="projects"
         style="visibility: hidden;"
-        class="text-white h-fit w-3/4 flex relative mt-10  rounded bg-card shadow-2xl"
+        class="text-black dark:text-white h-fit w-3/4 flex relative mt-10  rounded bg-card dark:bg-[#323279] shadow-2xl"
       >
         <div class="mt-5 w-full">
-          <div class="header-container rounded w-fit p-2 shadow-xl">
+          <div class="header-container text-white bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-2 shadow-xl">
             <h1 class="text-4xl font-bold mb-2">Projects</h1>
           </div>
         </div>
         <div
           id="projects-section"
-          class="grid grid-cols-1 md:grid-cols-2 rounded bg-card h-fit items-center place-content-center"
+          class="grid grid-cols-1 md:grid-cols-2 rounded bg-card dark:bg-[#323279] h-fit items-center place-content-center"
         >
           <div class="rounded overflow-hidden cardHover align-center">
             <div class="mb-2">Project 1</div>
@@ -392,11 +394,11 @@
       <section
         id="contact"
         style="visibility: hidden;"
-        class="text-white h-fit w-3/4  mt-10 mb-10  p-3 flex justify-between items-center relative rounded bg-card mb-50 shadow-2xl"
+        class="text-black dark:text-white h-fit w-3/4  mt-10 mb-10  p-3 flex justify-between items-center relative rounded bg-card dark:bg-[#323279] mb-50 shadow-2xl"
       >
         <div>
           <div class="w-full">
-            <div class="header-container rounded w-fit p-3 shadow-xl">
+            <div class="header-container text-white bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-3 shadow-xl">
               <h1 class="text-4xl font-bold">Contact</h1>
             </div>
 
@@ -412,7 +414,7 @@
                   <div class="mb-5">
                     <label
                       for="name"
-                      class="mb-3 block text-base font-medium text-white"
+                      class="mb-3 block text-base font-medium text-black dark:text-white"
                     >
                       Full Name
                     </label>
@@ -427,7 +429,7 @@
                   <div class="mb-5">
                     <label
                       for="email"
-                      class="mb-3 block text-base font-medium text-white"
+                      class="mb-3 block text-base font-medium text-black dark:text-white"
                     >
                       Email Address
                     </label>
@@ -442,7 +444,7 @@
                   <div class="mb-5">
                     <label
                       for="subject"
-                      class="mb-3 block text-base font-medium text-white"
+                      class="mb-3 block text-base font-medium text-black dark:text-white"
                     >
                       Subject
                     </label>
@@ -457,7 +459,7 @@
                   <div class="mb-5">
                     <label
                       for="message"
-                      class="mb-3 block text-base font-medium text-white"
+                      class="mb-3 block text-base font-medium text-black dark:text-white"
                     >
                       Message
                     </label>
@@ -471,7 +473,7 @@
                   </div>
                   <div>
                     <button
-                      class="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none"
+                      class="hover:shadow-form rounded-md text-black dark:text-white bg-[#510176] dark:bg-[#6A64F1] py-3 px-8 text-base font-semibold text-white outline-none"
                     >
                       Submit
                     </button>
@@ -501,8 +503,8 @@
     </div>
     <footer class="w-full h-20 flex justify-center items-center">
       <div class="flex flex-col">
-        <p id="footer-date" class="text-white"></p>
-        <div class="flex mb-3 sm:block md:hidden text-white">
+        <p id="footer-date" class="text-black dark:text-white"></p>
+        <div class="flex mb-3 sm:block md:hidden text-black dark:text-white">
           <a
             href="https://github.com/smithville77"
             id="social-btns-footer"

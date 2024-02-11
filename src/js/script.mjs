@@ -214,6 +214,9 @@ function footerDate() {
 }
 footerDate();
 
+document.getElementById('toggleDarkMode').addEventListener('click', function() {
+    document.documentElement.classList.toggle('dark');
+});
 
 
 // const date = footerDate();
