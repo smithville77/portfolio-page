@@ -1035,7 +1035,7 @@ background-color: aquamarine;
   height: 50px;
   width: 80px;
   /* background-color: black; */
-  color:white;
+  color: white;
   border: 2px solid white;
 }
 
@@ -1190,7 +1190,7 @@ p {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 34px;
 }
 
@@ -1202,7 +1202,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 50%;
 }
 
@@ -1285,5 +1285,3 @@ input:checked + .light-dark-slider > #icon-container {
     display: flex;
   }
 }
-
-
