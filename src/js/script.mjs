@@ -223,10 +223,10 @@ const themeToggle = document.getElementById("btn-toggle-container");
 themeToggle.addEventListener("click", () => {
   // lightIcon.classList.toggle("hidden");
   // darkIcon.classList.toggle("hidden");
-  if (themeIcon.innerText === "dark_mode") {
-    themeIcon.innerText = "wb_sunny";
+  if (themeIcon.innerText === "wb_sunny") {
+    themeIcon.innerText = "dark_mode";
   } else {
-    themeIcon.innerText = "dark_mode"
+    themeIcon.innerText = "wb_sunny"
   }
 
   document.documentElement.classList.toggle("dark");
