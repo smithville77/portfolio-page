@@ -214,8 +214,6 @@ function footerDate() {
 }
 footerDate();
 
-
-
 const themeIcon = document.getElementById("switch-icon");
 
 const themeToggle = document.getElementById("btn-toggle-container");
@@ -226,12 +224,11 @@ themeToggle.addEventListener("click", () => {
   if (themeIcon.innerText === "wb_sunny") {
     themeIcon.innerText = "dark_mode";
   } else {
-    themeIcon.innerText = "wb_sunny"
+    themeIcon.innerText = "wb_sunny";
   }
 
   document.documentElement.classList.toggle("dark");
 });
-
 
 // Function to capture content as an image
 function captureContent() {
@@ -264,23 +261,21 @@ function animateCanvas(canvas) {
 function startEffect() {
   // Capture content as an image
   const imageData = captureContent();
-  
+
   // Split image data into portions
   const portions = splitImageData(imageData, 35); // Adjust the number of portions as needed
-  
+
   // Create canvases for each portion and apply animation effects
-  portions.forEach(imageDataPortion => {
-      const canvas = createCanvasFromImageData(imageDataPortion);
-      animateCanvas(canvas);
-      // Append the canvas to the document body or a specific element
-      document.body.appendChild(canvas);
+  portions.forEach((imageDataPortion) => {
+    const canvas = createCanvasFromImageData(imageDataPortion);
+    animateCanvas(canvas);
+    // Append the canvas to the document body or a specific element
+    document.body.appendChild(canvas);
   });
 }
 
 // Event listener to start the effect
 // document.getElementById("start-btn").addEventListener("click", startEffect);
-
-
 
 // const date = footerDate();
 // console.log(date)
