@@ -232,6 +232,56 @@ themeToggle.addEventListener("click", () => {
   document.documentElement.classList.toggle("dark");
 });
 
+
+// Function to capture content as an image
+function captureContent() {
+  // Use html2canvas library or native HTML5 Canvas API to capture content
+  // Return the captured image data
+}
+
+// Function to split image data into portions
+function splitImageData(imageData, numPortions) {
+  // Split the imageData into numPortions portions
+  // Return an array of smaller image data portions
+}
+
+// Function to create a canvas from image data
+function createCanvasFromImageData(imageData) {
+  // Create a new canvas
+  // Set its width and height
+  // Get its 2D rendering context
+  // Put the image data onto the canvas
+  // Return the canvas element
+}
+
+// Function to apply animation effects to a canvas
+function animateCanvas(canvas) {
+  // Apply animation effects to the canvas
+  // You can use CSS animations, requestAnimationFrame, or any other animation technique
+}
+
+// Main function to start the effect
+function startEffect() {
+  // Capture content as an image
+  const imageData = captureContent();
+  
+  // Split image data into portions
+  const portions = splitImageData(imageData, 35); // Adjust the number of portions as needed
+  
+  // Create canvases for each portion and apply animation effects
+  portions.forEach(imageDataPortion => {
+      const canvas = createCanvasFromImageData(imageDataPortion);
+      animateCanvas(canvas);
+      // Append the canvas to the document body or a specific element
+      document.body.appendChild(canvas);
+  });
+}
+
+// Event listener to start the effect
+// document.getElementById("start-btn").addEventListener("click", startEffect);
+
+
+
 // const date = footerDate();
 // console.log(date)
 // const socialBtns = Array.from(document.getElementsByClassName("social-btn"));
