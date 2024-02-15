@@ -232,7 +232,6 @@ input:checked + .light-dark-slider > #icon-container {
   left: calc(100% - 30px);
 }
 
-
 .container {
   position: relative;
   width: 200px;
@@ -249,10 +248,9 @@ input:checked + .light-dark-slider > #icon-container {
 }
 
 .snap-button {
- 
   transform: translateX(-50%);
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   cursor: pointer;
@@ -271,11 +269,11 @@ input:checked + .light-dark-slider > #icon-container {
 
 @keyframes disintegrate {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
   100% {
-      opacity: 0;
-      transform: translateX(calc(-50% + random(0, 100vw))) translateY(calc(-50% + random(0, 100vh))) scale(0.5);
+    opacity: 0;
+    transform: translateX(calc(-50% + random(0, 100vw)))
+      translateY(calc(-50% + random(0, 100vh))) scale(0.5);
   }
 }
-
