@@ -249,6 +249,7 @@ function createCanvasFromImageData(imageData) {
   // Get its 2D rendering context
   // Put the image data onto the canvas
   // Return the canvas element
+  
 }
 
 // Function to apply animation effects to a canvas
