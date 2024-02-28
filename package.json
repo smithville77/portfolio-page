@@ -3,6 +3,7 @@
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
+    "chance": "^1.1.11",
     "html2canvas": "^1.4.1"
   }
 }
