@@ -219,8 +219,6 @@ const themeIcon = document.getElementById("switch-icon");
 const themeToggle = document.getElementById("btn-toggle-container");
 
 themeToggle.addEventListener("click", () => {
-  // lightIcon.classList.toggle("hidden");
-  // darkIcon.classList.toggle("hidden");
   if (themeIcon.innerText === "wb_sunny") {
     themeIcon.innerText = "dark_mode";
   } else {
@@ -230,11 +228,21 @@ themeToggle.addEventListener("click", () => {
   document.documentElement.classList.toggle("dark");
 });
 
+const snapList = document.getElementsByClassName("snap");
+const thanosBtn = document.getElementById("snap-button");
+thanosBtn.addEventListener("click", captureContent());
 // Function to capture content as an image
 function captureContent() {
-  // Use html2canvas library or native HTML5 Canvas API to capture content
-  // Return the captured image data
+  // Loop through each element with class "snap"
+  for (let i = 0; i < snapList.length; i++) {
+    const element = snapList[i];
+    // Use html2canvas library or native HTML5 Canvas API to capture content
+    html2canvas(element).then(function (canvas) {
+      document.body.appendChild(canvas);
+    });
+  }
 }
+
 
 // Function to split image data into portions
 function splitImageData(imageData, numPortions) {
@@ -249,7 +257,6 @@ function createCanvasFromImageData(imageData) {
   // Get its 2D rendering context
   // Put the image data onto the canvas
   // Return the canvas element
-  
 }
 
 // Function to apply animation effects to a canvas
