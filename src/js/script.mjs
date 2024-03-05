@@ -283,7 +283,7 @@ function startEffect() {
 }
 
 // Event listener to start the effect
-// document.getElementById("start-btn").addEventListener("click", startEffect);
+document.getElementById("start-btn").addEventListener("click", startEffect);
 
 // const date = footerDate();
 // console.log(date)
