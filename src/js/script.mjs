@@ -1,5 +1,7 @@
 import config from "./config.js";
 
+
+
 async function getWeatherData() {
   const url = `${config.apiUrl}${config.apiKey}`;
   const weatherDescContainer = document.getElementById("weather-desc");
@@ -229,17 +231,19 @@ themeToggle.addEventListener("click", () => {
 });
 
 const snapList = document.getElementsByClassName("snap");
-const thanosBtn = document.getElementById("snap-button");
-thanosBtn.addEventListener("click", captureContent());
+const thanosBtn = document.getElementById("thanos-button");
+thanosBtn.addEventListener("click", captureContent);
 // Function to capture content as an image
 function captureContent() {
   // Loop through each element with class "snap"
   for (let i = 0; i < snapList.length; i++) {
     const element = snapList[i];
+    console.log(element)
     // Use html2canvas library or native HTML5 Canvas API to capture content
     html2canvas(element).then(function (canvas) {
       document.body.appendChild(canvas);
     });
+    console.log("here")
   }
 }
 
@@ -283,7 +287,7 @@ function startEffect() {
 }
 
 // Event listener to start the effect
-document.getElementById("start-btn").addEventListener("click", startEffect);
+// document.getElementById("start-btn").addEventListener("click", startEffect);
 
 // const date = footerDate();
 // console.log(date)
