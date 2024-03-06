@@ -238,12 +238,12 @@ function captureContent() {
   // Loop through each element with class "snap"
   for (let i = 0; i < snapList.length; i++) {
     const element = snapList[i];
-    console.log(element)
+    
     // Use html2canvas library or native HTML5 Canvas API to capture content
     html2canvas(element).then(function (canvas) {
       document.body.appendChild(canvas);
     });
-    console.log("here")
+    
   }
 }
 
