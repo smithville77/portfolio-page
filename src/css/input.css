@@ -80,10 +80,14 @@ body::-webkit-scrollbar-thumb {
 p {
   font-weight: normal;
 }
+
 .fadeOut {
   animation: fadeOut 0.3s ease-in-out;
   opacity: 0;
 }
+
+
+
 
 
 
