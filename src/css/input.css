@@ -13,6 +13,10 @@ background-color: aquamarine;
 activ-sidebar class"
 background-color: aquamarine;
 */
+.sidebar {
+  width: 20vw;
+  margin-left: 10vw;
+}
 
 .dark body {
   /* Dark mode styles */
@@ -56,7 +60,9 @@ background-color: aquamarine;
 body {
   /* background-color: rgb(32, 32, 77); */
   font-size: 12px;
-  font-family: "Tilt Neon", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 1200;
+
   overflow-y: scroll;
 }
 body::-webkit-scrollbar {
@@ -85,8 +91,6 @@ p {
   animation: fadeOut 0.3s ease-in-out;
   opacity: 0;
 }
-
-
 
 
 
@@ -224,6 +228,7 @@ p {
   transition: 0.4s;
   border-radius: 50%;
 }
+
 
 #icon-container {
   left: 4px;
