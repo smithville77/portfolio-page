@@ -2,37 +2,37 @@ import config from "./config.js";
 
 
 
-async function getWeatherData() {
-  const url = `${config.apiUrl}${config.apiKey}`;
-  const weatherDescContainer = document.getElementById("weather-desc");
+// async function getWeatherData() {
+//   const url = `${config.apiUrl}${config.apiKey}`;
+//   const weatherDescContainer = document.getElementById("weather-desc");
 
-  try {
-    const response = await fetch(url);
+//   try {
+//     const response = await fetch(url);
 
-    if (!response.ok) {
-      throw new Error("Error retrieving weather results");
-    }
+//     if (!response.ok) {
+//       throw new Error("Error retrieving weather results");
+//     }
 
-    const data = await response.json();
-    console.log(data);
-    const temp = data.main.temp.toFixed(0);
-    const weatherDesc = data.weather[0].description;
-    const weatherIcon = data.weather[0].icon;
+//     const data = await response.json();
+//     console.log(data);
+//     const temp = data.main.temp.toFixed(0);
+//     const weatherDesc = data.weather[0].description;
+//     const weatherIcon = data.weather[0].icon;
 
-    const weatherIconImg = document.createElement("img");
-    weatherIconImg.setAttribute("width", "25px");
-    weatherIconImg.style.display = "inline";
-    weatherIconImg.src = `http://openweathermap.org/img/w/${weatherIcon}.png`;
+//     const weatherIconImg = document.createElement("img");
+//     weatherIconImg.setAttribute("width", "25px");
+//     weatherIconImg.style.display = "inline";
+//     weatherIconImg.src = `http://openweathermap.org/img/w/${weatherIcon}.png`;
 
-    const weatherSentence = `Based in Melbourne, where it's currently ${temp}° with ${weatherDesc}`;
-    weatherDescContainer.textContent = weatherSentence;
-    weatherDescContainer.appendChild(weatherIconImg);
-  } catch (error) {
-    console.error("Error fetching weather data:", error);
-  }
-}
+//     const weatherSentence = `Based in Melbourne, where it's currently ${temp}° with ${weatherDesc}`;
+//     weatherDescContainer.textContent = weatherSentence;
+//     weatherDescContainer.appendChild(weatherIconImg);
+//   } catch (error) {
+//     console.error("Error fetching weather data:", error);
+//   }
+// }
 
-getWeatherData();
+// getWeatherData();
 document.addEventListener("DOMContentLoaded", function () {
   // const svgContainer = document.getElementById("svgContainer");
   // const svgLine = document.getElementById("scrollLine");
