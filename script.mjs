@@ -1,12 +1,9 @@
+import config from "./config.js";
 
-
-
-const apiKey = process.env.API_KEY;
-const apiUrl = process.env.API_URL;
 
 
 async function getWeatherData() {
-  const url = `${apiUrl}${apiKey}`;
+  const url = `${config.apiUrl}${config.apiKey}`;
   const weatherDescContainer = document.getElementById("weather-desc");
 
   try {
