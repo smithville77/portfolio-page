@@ -13,11 +13,46 @@ background-color: aquamarine;
 activ-sidebar class"
 background-color: aquamarine;
 */
-.sidebar {
-  width: 20vw;
+
+
+#sidebar {
+  position: relative;
   margin-left: 10vw;
+  height: auto;
+  width: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
+#main-sect {
+  padding: 20px;
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* Styles for larger screens (lg and above) */
+@media (min-width: 1024px) {
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 25vw;
+  }
+
+  #main-sect {
+    margin-left: 18vw;
+    max-width: calc(100vw - 25vw);
+  }
+  #main-content {
+    width: 80%;
+  }
+}
 .dark body {
   /* Dark mode styles */
   background-color: rgb(32, 32, 77);
@@ -31,6 +66,7 @@ background-color: aquamarine;
 
 .dark .bg-black {
   background-color: #111;
+  color: rgb(177, 207, 255);
 }
 
 .dark .text-white {
@@ -59,7 +95,7 @@ background-color: aquamarine;
 
 body {
   /* background-color: rgb(32, 32, 77); */
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 1200;
 
