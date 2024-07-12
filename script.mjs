@@ -1,129 +1,104 @@
-// import config from "./config.js";
+import config from "./config.js";
 
 
 
-// async function getWeatherData() {
-//   const url = `${config.apiUrl}${config.apiKey}`;
-//   const weatherDescContainer = document.getElementById("weather-desc");
+async function getWeatherData() {
+  const url = `${config.apiUrl}${config.apiKey}`;
+  const weatherDescContainer = document.getElementById("weather-desc");
 
-//   try {
-//     const response = await fetch(url);
+  try {
+    const response = await fetch(url);
 
-//     if (!response.ok) {
-//       throw new Error("Error retrieving weather results");
-//     }
+    if (!response.ok) {
+      throw new Error("Error retrieving weather results");
+    }
 
-//     const data = await response.json();
-//     console.log(data);
-//     const temp = data.main.temp.toFixed(0);
-//     const weatherDesc = data.weather[0].description;
-//     const weatherIcon = data.weather[0].icon;
+    const data = await response.json();
+    console.log(data);
+    const temp = data.main.temp.toFixed(0);
+    const weatherDesc = data.weather[0].description;
+    const weatherIcon = data.weather[0].icon;
 
-//     const weatherIconImg = document.createElement("img");
-//     weatherIconImg.setAttribute("width", "25px");
-//     weatherIconImg.style.display = "inline";
-//     weatherIconImg.src = `http://openweathermap.org/img/w/${weatherIcon}.png`;
+    const weatherIconImg = document.createElement("img");
+    weatherIconImg.setAttribute("width", "25px");
+    weatherIconImg.style.display = "inline";
+    weatherIconImg.src = `http://openweathermap.org/img/w/${weatherIcon}.png`;
 
-//     const weatherSentence = `Based in Melbourne, where it's currently ${temp}° with ${weatherDesc}`;
-//     weatherDescContainer.textContent = weatherSentence;
-//     weatherDescContainer.appendChild(weatherIconImg);
-//   } catch (error) {
-//     console.error("Error fetching weather data:", error);
-//   }
-// }
+    const weatherSentence = `Based in Melbourne, where it's currently ${temp}° with ${weatherDesc}`;
+    weatherDescContainer.textContent = weatherSentence;
+    weatherDescContainer.appendChild(weatherIconImg);
+  } catch (error) {
+    console.error("Error fetching weather data:", error);
+  }
+}
 
-// getWeatherData();
-document.addEventListener("DOMContentLoaded", function () {
-  // const svgContainer = document.getElementById("svgContainer");
-  // const svgLine = document.getElementById("scrollLine");
-  const mainSect = document.getElementById("main-sect");
-  const containerHeight = mainSect.clientHeight;
+getWeatherData();
+
+document.addEventListener("DOMContentLoaded", () => {
   const aboutMeSect = document.getElementById("about-me-sect");
-
-  // const svgContainer2 = document.getElementById("svgContainer2");
-  // const svgLine2 = document.getElementById("scrollLine2");
-  const aboutMeSectTop = aboutMeSect.offsetTop + 0.1 * window.innerHeight; // Start when aboutMeSect is 30vh from the top
   const projectSect = document.getElementById("projects");
-
   const contactSect = document.getElementById("contact");
-  const projectSectTop = projectSect.offsetTop + 0.1 * window.innerHeight;
-  // const svgLine3 = document.getElementById("scrollLine3");
+
+  const aboutMeSectTop = aboutMeSect.offsetTop;
+  const projectSectTop = projectSect.offsetTop;
+  const contactSectTop = contactSect.offsetTop;
 
   let aboutMeSectionVisible = false;
   let projectSectionVisible = false;
   let contactSectionVisible = false;
 
+  function toggleSectionVisibility(section, isVisible) {
+    if (isVisible) {
+      section.style.visibility = "visible";
+      section.classList.remove("fadeOut");
+      section.classList.add("fadeIn");
+    } else {
+      section.classList.remove("fadeIn");
+      section.classList.add("fadeOut");
+      setTimeout(() => {
+        section.style.visibility = "hidden";
+      }, 300); // Adjust timeout to match animation duration
+    }
+  }
+
   window.addEventListener("scroll", function () {
-    const scrollPerc =
-      window.scrollY /
-      (document.documentElement.scrollHeight - containerHeight);
-    const draw = 700 * scrollPerc;
+    const scrollY = window.scrollY + window.innerHeight;
+    const scrollBottom = window.scrollY + window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
 
-    // svgLine.setAttribute("y2", draw + "%");
-
-    if (draw >= 90 && !aboutMeSectionVisible) {
-      aboutMeSectionVisible = true;
-      aboutMeSect.style.display = "block";
-      aboutMeSect.style.visibility = "visible";
-
-      if (aboutMeSect.classList.contains("fadeOut")) {
-        aboutMeSect.classList.remove("fadeOut");
+    if (scrollY >= aboutMeSectTop && window.scrollY < aboutMeSectTop + aboutMeSect.clientHeight) {
+      if (!aboutMeSectionVisible) {
+        aboutMeSectionVisible = true;
+        toggleSectionVisibility(aboutMeSect, true);
       }
-      aboutMeSect.classList.add("fadeIn");
-    } else if (draw < 90 && aboutMeSectionVisible) {
+    } else if (aboutMeSectionVisible) {
       aboutMeSectionVisible = false;
-      aboutMeSect.classList.remove("fadeIn");
-      aboutMeSect.classList.add("fadeOut");
-      aboutMeSect.style.display = "hidden";
+      toggleSectionVisibility(aboutMeSect, false);
     }
 
-    // Check if the user has scrolled past the "About Me" section
-    if (aboutMeSectionVisible && window.scrollY >= aboutMeSectTop) {
-      const scrollPerc2 =
-        (window.scrollY - aboutMeSectTop) /
-        (document.documentElement.scrollHeight - aboutMeSectTop);
-      const draw2 = 700 * scrollPerc2;
-
-      if (draw2 >= 100 && !projectSectionVisible) {
+    if (scrollY >= projectSectTop && window.scrollY < projectSectTop + projectSect.clientHeight) {
+      if (!projectSectionVisible) {
         projectSectionVisible = true;
-
-        projectSect.style.display = "block";
-        projectSect.style.visibility = "visible";
-        if (projectSect.classList.contains("fadeOut")) {
-          projectSect.classList.remove("fadeOut");
-        }
-        projectSect.classList.add("fadeIn");
-      } else if (draw2 < 90 && projectSectionVisible) {
-        projectSectionVisible = false;
-        projectSect.style.display = "hidden";
-        projectSect.classList.remove("fadeIn");
-        projectSect.classList.add("fadeOut");
+        toggleSectionVisibility(projectSect, true);
       }
+    } else if (projectSectionVisible) {
+      projectSectionVisible = false;
+      toggleSectionVisibility(projectSect, false);
     }
 
-    if (projectSectionVisible && window.scrollY >= projectSectTop) {
-      const scrollPerc3 =
-        (window.scrollY - projectSectTop) /
-        (document.documentElement.scrollHeight - projectSectTop);
-      const draw3 = 700 * scrollPerc3;
-
-      if (draw3 >= 90 && !contactSectionVisible) {
+    if (scrollY >= contactSectTop || scrollBottom >= documentHeight) {
+      if (!contactSectionVisible) {
         contactSectionVisible = true;
-        contactSect.style.display = "block";
-        contactSect.style.visibility = "visible";
-        if (contactSect.classList.contains("fadeOut")) {
-          contactSect.classList.remove("fadeOut");
-        }
-        contactSect.classList.add("fadeIn");
-      } else if (draw3 < 90 && contactSectionVisible) {
-        contactSectionVisible = false;
-        contactSect.style.display = "hidden";
-        contactSect.classList.remove("fadeIn");
-        contactSect.classList.add("fadeOut");
+        toggleSectionVisibility(contactSect, true);
       }
+    } else if (contactSectionVisible) {
+      contactSectionVisible = false;
+      toggleSectionVisibility(contactSect, false);
     }
   });
 });
+
+
 
 function scrollToTop() {
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -231,41 +206,137 @@ themeToggle.addEventListener("click", () => {
 });
 
 
+const canvasCount = 35;
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const welcomeSection = document.getElementById("welcome-sect");
-//   const sidebarContainer = document.getElementById("welcome-spacer");
-//   const mainSect = document.getElementById("main-sect");
-//   let isSidebarVisible = false;
+document.getElementById("start-btn").addEventListener("click", function() {
+  const ids = ["welcome-sect", "linkedIn", "contact-btn", "about-btn", "tag-line-sidebar"];
+  const elements = ids.map(id => document.getElementById(id)).filter(el => el !== null);
+  elements.forEach(function(element) {
+    applyThanosSnap(element);
+  });
+});
 
-//   const debounce = (func, delay) => {
-//     let timeout;
-//     return function () {
-//       const context = this;
-//       const args = arguments;
-//       clearTimeout(timeout);
-//       timeout = setTimeout(() => func.apply(context, args), delay);
-//     };
-//   };
+function applyThanosSnap(element) {
+  html2canvas(element).then(function(canvas) {
+    const ctx = canvas.getContext("2d");
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const pixelArr = imageData.data;
+    const imageDataArray = [];
 
-//   const handleScroll = debounce(function () {
-//     const scrollY = window.scrollY;
-//     const threshold = 100;
+    createBlankImageData(imageData, imageDataArray);
 
-//     if (scrollY >= threshold && !isSidebarVisible) {
+    for (let i = 0; i < pixelArr.length; i += 4) {
+      const p = Math.floor((i / pixelArr.length) * canvasCount);
+      const a = imageDataArray[weightedRandomDistrib(p)];
+      a[i] = pixelArr[i];
+      a[i + 1] = pixelArr[i + 1];
+      a[i + 2] = pixelArr[i + 2];
+      a[i + 3] = pixelArr[i + 3];
+    }
 
-//       sidebarContainer.append(welcomeSection);
-//       welcomeSection.classList.add("animate-move-into-sidebar");
-//       welcomeSection.querySelector("div").classList.remove("ml-20", "w-1/2");
-//       isSidebarVisible = true;
-//     } else if (scrollY < threshold && isSidebarVisible) {
+    const elementRect = element.getBoundingClientRect();
+    for (let i = 0; i < canvasCount; i++) {
+      const c = newCanvasFromImageData(imageDataArray[i], canvas.width, canvas.height);
+      c.classList.add("dust");
+      c.style.position = "absolute";
+      c.style.top = `${elementRect.top + window.scrollY}px`;
+      c.style.left = `${elementRect.left + window.scrollX}px`;
+      c.style.width = `${elementRect.width}px`;
+      c.style.height = `${elementRect.height}px`;
+      document.body.appendChild(c);
+    }
 
-//       mainSect.prepend(welcomeSection);
-//       welcomeSection.classList.remove("animate-move-into-sidebar", "fadeIn");
-//       welcomeSection.querySelector("div").classList.add("mt-20", "ml-20", "w-1/2");
-//       isSidebarVisible = false;
-//     }
-//   }, 300);
+    element.style.visibility = "hidden";
 
-//   window.addEventListener("scroll", handleScroll);
-// });
+    document.querySelectorAll(".dust").forEach(function(elem, index) {
+      animateBlur(elem, 0.8, 800);
+      setTimeout(function() {
+        animateTransform(elem, 100, -100, getRandomInt(-15, 15), 800 + (110 * index));
+      }, 70 * index);
+
+      setTimeout(function() {
+        elem.style.opacity = 0;
+        elem.style.transition = "opacity 3.5s ease-out";
+      }, 70 * index);
+
+      setTimeout(function() {
+        elem.parentNode.removeChild(elem);
+      }, (110 * index) + 800);
+    });
+  }).catch(function(error) {
+    console.error("Error capturing section:", error);
+  });
+}
+
+function createBlankImageData(imageData, imageDataArray) {
+  for (let i = 0; i < canvasCount; i++) {
+    const arr = new Uint8ClampedArray(imageData.data);
+    for (let j = 0; j < arr.length; j++) {
+      arr[j] = 0;
+    }
+    imageDataArray.push(arr);
+  }
+}
+
+function newCanvasFromImageData(imageDataArray, w, h) {
+  const canvas = document.createElement('canvas');
+  canvas.width = w;
+  canvas.height = h;
+  const tempCtx = canvas.getContext("2d");
+  tempCtx.putImageData(new ImageData(imageDataArray, w, h), 0, 0);
+  return canvas;
+}
+
+function weightedRandomDistrib(peak) {
+  const prob = [], seq = [];
+  for (let i = 0; i < canvasCount; i++) {
+    prob.push(Math.pow(canvasCount - Math.abs(peak - i), 3));
+    seq.push(i);
+  }
+  return weightedRandom(seq, prob);
+}
+
+function weightedRandom(seq, prob) {
+  const sum = prob.reduce((a, b) => a + b, 0);
+  let acc = 0;
+  const rand = Math.random() * sum;
+  for (let i = 0; i < seq.length; i++) {
+    acc += prob[i];
+    if (rand < acc) {
+      return seq[i];
+    }
+  }
+}
+
+function animateBlur(elem, radius, duration) {
+  let r = 0;
+  const animInterval = setInterval(function() {
+    if (r < radius) {
+      r++;
+      elem.style.filter = 'blur(' + r + 'px)';
+    } else {
+      clearInterval(animInterval);
+    }
+  }, duration / radius);
+}
+
+function animateTransform(elem, sx, sy, angle, duration) {
+  let td = 0, tx = 0, ty = 0;
+  let start = null;
+  const animFunction = function(timestamp) {
+    if (!start) start = timestamp;
+    const progress = timestamp - start;
+    td = (progress / duration) * angle;
+    tx = (progress / duration) * sx;
+    ty = (progress / duration) * sy;
+    elem.style.transform = 'rotate(' + td + 'deg)' + 'translate(' + tx + 'px,' + ty + 'px)';
+    if (progress < duration) {
+      window.requestAnimationFrame(animFunction);
+    }
+  };
+  window.requestAnimationFrame(animFunction);
+}
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}

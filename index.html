@@ -15,15 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.js"
-      integrity="sha512-sn/GHTj+FCxK5wam7k9w4gPPm6zss4Zwl/X9wgrvGMFbnedR8lTUSLdsolDRBRzsX6N+YgG6OWyvn9qaFVXH9w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
-    <!-- <script type="module" src="./config.js"></script> -->
+    <script type="module" src="./config.js"></script>
     <script type="module" src="./script.mjs" defer></script>
   </head>
   <body class="bg-white dark:bg-[rgb(32, 32, 77)] text-black dark:text-white">
@@ -33,7 +29,7 @@
     >
       <div
         id="sidebar"
-        class="max-w-80 ml-5 flex hidden lg:flex w-full lg:w-1/4 lg:fixed lg:h-screen"
+        class="max-w-96 ml-5 flex hidden lg:flex w-full lg:w-1/4 lg:fixed lg:h-screen"
       >
         <div id="welcome-spacer" class="w-fit">
           <div
@@ -41,6 +37,7 @@
             class="text-black dark:text-white h-50 flex relative"
           >
             <!-- Introduction container -->
+             <button id="start-btn">button</button>
             <div class="mt-10">
               <!-- <button id="toggleDarkMode">Toggle Dark Mode</button> -->
               <label class="switch">
@@ -57,48 +54,50 @@
               </label>
 
               <h1 class="text-4xl font-bold mt-10">Adam Smith</h1>
-              <h2 class="text-1xl font-bold">Aspiring Developer</h2>
+              <h2 id="tag-line-sidebar" class="text-1xl font-bold">Aspiring Developer</h2>
             </div>
           </div>
         </div>
 
         <span>
           <div class="flex items-center mb-2 hr-nav-container">
-            <hr class="hr-active" />
             <button
               id="welcome-btn"
-              class="text-black dark:text-white text-s ml-3 navBtn"
+              class="text-black dark:text-white text-s navBtn flex items-center"
               onclick="scrollToTop()"
             >
-              Welcome
+              <hr class="hr-active" />
+              <p class="ml-3">Welcome</p>
             </button>
           </div>
           <div class="flex items-center mb-2 hr-nav-container">
-            <hr class="hr-active" />
+            
             <button
-              class="text-black dark:text-white text-s ml-3 navBtn"
+              class="text-black dark:text-white text-s  navBtn flex items-center"
               id="about-btn"
             >
-              About
+            <hr class="hr-active" />
+              <p class="ml-3">About</p>
             </button>
           </div>
 
           <div class="flex items-center mb-2 hr-nav-container">
-            <hr class="hr-active" />
             <button
-              class="text-black dark:text-white text-s ml-3 navBtn"
+              class="text-black dark:text-white text-s navBtn flex items-center"
               id="projects-btn"
             >
-              Projects
+              <hr class="hr-active" />
+              <p class="ml-3">Projects</p>
             </button>
           </div>
+          
           <div class="flex items-center mb-2 hr-nav-container">
-            <hr class="hr-active" />
             <button
-              class="text-black dark:text-white text-s ml-3 navBtn"
+              class="text-black dark:text-white text-s navBtn flex items-center"
               id="contact-btn"
             >
-              Contact
+              <hr class="hr-active" />
+              <p class="ml-3">Contact</p>
             </button>
           </div>
         </span>
@@ -133,7 +132,7 @@
             <a
               href="https://www.linkedin.com/in/adam-smith-520320268/"
               class="group inline-block"
-              ><span class="social-btn">
+              ><span class="social-btn" id="linkedIn">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -152,18 +151,18 @@
       </div>
 
       <div
-        id="main-sect"
-        class="mx-auto lg:ml[30vw] min-h-screen max-w-screen-lg relative flex-1 flex flex-col justify-center items-center dark:bg-white"
-      >
+  id="main-sect"
+  class="mx-auto lg:ml-[30vw] min-h-screen max-w-screen-lg relative flex-1 flex flex-col justify-center items-center dark:bg-white md:mt-10 lg:mt-28"
+>
         <!-- Hero Section -->
         <section
           id="welcome-sect"
-          class="text-white h-fit w-3/4 md:w-4/5 lg:w-4/5 mt-20 p-3 flex justify-between items-center relative rounded bg-card dark:bg-[#323279] shadow-2xl"
+          class="text-white h-fit w-3/4 md:w-4/5 lg:w-4/5  p-3 flex justify-between items-center relative rounded bg-card dark:bg-[#323279] shadow-2xl"
         >
           <!-- Introduction container -->
           <div class="text-black dark:text-white">
             <div
-              class="disintegrate header-container text-white bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-2 shadow-xl"
+              class="disintegrate header-container text-white bg-blue-700 dark:bg-[#6A64F1] rounded w-fit p-2 shadow-xl "
             >
               <h1 class="text-4xl font-bold">Welcome</h1>
             </div>
@@ -188,11 +187,11 @@
         <section
           id="about-me-sect"
           style="visibility: hidden"
-          class="text-black dark:text-white h-fit w-3/4 md:w-4/5 lg:w-4/5 mt-20 p-3 flex justify-between items-center relative rounded bg-card dark:bg-[#323279] shadow-2xl"
+          class="text-black dark:text-white h-fit w-3/4 md:w-4/5 lg:w-4/5 mt-20 p-3 flex justify-between items-center relative rounded bg-card dark:bg-[#323279] shadow-2xl flex-col"
         >
           <div class="h-fit">
             <div
-              class="header-container text-white bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-2 shadow-xl"
+              class="header-container text-white bg-blue-700 dark:bg-[#6A64F1] rounded w-fit p-2 shadow-xl"
             >
               <h1 class="text-4xl font-bold">About Me</h1>
             </div>
@@ -205,8 +204,7 @@
                   <h4>Junior Web Developer</h4>
                   <em>June 1st, 2023 - December 22nd, 2023</em>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Excepturi, doloribus!
+                    <!--  -->
                   </p>
                   <span
                     class="inline-block rounded-full px-3 py-1 text-sm mr-2 mb-2 text-white dark:text-bubble-text bg-blue-700 dark:bg-bubble"
@@ -286,11 +284,11 @@
         <section
           id="projects"
           style="visibility: hidden"
-          class="text-black dark:text-white h-fit w-3/4 md:w-4/5 lg:w-4/5 flex relative mt-10 rounded bg-card dark:bg-[#323279] shadow-2xl"
+          class="text-black dark:text-white h-fit w-3/4 md:w-4/5 lg:w-4/5 flex flex-col relative mt-10 rounded bg-card dark:bg-[#323279] shadow-2xl"
         >
           <div class="mt-5 w-full">
             <div
-              class="header-container text-white bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-2 shadow-xl"
+              class="header-container text-white bg-blue-700 dark:bg-[#6A64F1] rounded w-fit p-2 shadow-xl"
             >
               <h1 class="text-4xl font-bold mb-2">Projects</h1>
             </div>
@@ -345,31 +343,54 @@
               </div>
             </div>
             <div
-              class="max-w-sm mx-auto rounded overflow-hidden dark:hover:bg-[#25254d] hover:bg-[#36368f] hover:text-white draw text-center"
-            >
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">project 2</div>
-                <p class="text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                  exercitationem praesentium nihil.
-                </p>
+            class="rounded overflow-hidden dark:hover:bg-[#25254d] hover:bg-[#36368f] hover:text-white dark:card align-center"
+          >
+            <div class="mb-2">Fitbit Dashboard/Run Tracker</div>
+            <img
+              src="/src/images/Screenshot 2024-07-12 213128.png"
+              alt="ui/ux review check"
+              class="rounded object-fit mb-2"
+            />
+            <div class="">
+              <p class="text-sm pb-2">
+                A fitness dashbard that connects to the FitBit API and details up to date statistics. Created primarily to sort through the 100 most recents runs and output trends for specific distance and pace thresholds. This was a challenging project and is still currently under construction.
+              </p>
+            </div>
+            <div class="">
+              <div class="bubble-link">
+                <span
+                class="inline-block rounded-full px-3 py-1 text-sm mr-2 mb-2 text-white dark:text-white bg-gray-700 dark:bg-black"
+                  >Live</span
+                >
+                <span
+                class="inline-block rounded-full px-3 py-1 text-sm mr-2 mb-2 text-white  bg-gray-700 dark:bg-black"
+                  >Github Repo</span
+                >
               </div>
-              <div class="px-6 pt-4 pb-2">
+              <div class="bubble-tags">
                 <span
                 class="inline-block rounded-full px-3 py-1 text-sm mr-2 mb-2 text-white dark:text-bubble-text bg-blue-700 dark:bg-bubble"
-                  >#project 2</span
+                  >React</span
                 >
                 <span
                 class="inline-block rounded-full px-3 py-1 text-sm mr-2 mb-2 text-white dark:text-bubble-text bg-blue-700 dark:bg-bubble"
-                  >#project 2</span
+                  >Next.js</span
                 >
                 <span
                 class="inline-block rounded-full px-3 py-1 text-sm mr-2 mb-2 text-white dark:text-bubble-text bg-blue-700 dark:bg-bubble"
-                  >#project 2</span
+                  >TypeScript</span
+                >
+                <span
+                class="inline-block rounded-full px-3 py-1 text-sm mr-2 mb-2 text-white dark:text-bubble-text bg-blue-700 dark:bg-bubble"
+                  >MongoDB</span
+                >
+                <span
+                class="inline-block rounded-full px-3 py-1 text-sm mr-2 mb-2 text-white dark:text-bubble-text bg-blue-700 dark:bg-bubble"
+                  >Node</span
                 >
               </div>
             </div>
+          </div>
             <div
               class="max-w-sm mx-auto rounded overflow-hidden dark:hover:bg-[#25254d] hover:bg-[#36368f] hover:text-white draw text-center"
             >
@@ -430,10 +451,10 @@
           style="visibility: hidden"
           class="text-black dark:text-white h-fit w-3/4 md:w-4/5 lg:w-4/5 mt-10 mb-10 p-3 flex justify-between items-center relative rounded bg-card dark:bg-[#323279] mb-50 shadow-2xl"
         >
-          <div>
-            <div class="w-full">
+          <div class="w-full">
+            <div >
               <div
-                class="header-container text-white bg-blue-700 dark:bg-[#7fffd4] rounded w-fit p-3 shadow-xl"
+                class="header-container text-white bg-blue-700 dark:bg-[#6A64F1] rounded w-fit p-3 shadow-xl"
               >
                 <h1 class="text-4xl font-bold">Contact</h1>
               </div>
